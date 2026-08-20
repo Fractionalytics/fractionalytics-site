@@ -26,6 +26,18 @@ They ran the pilot, bought the license, or built the agent, and it worked well e
 
 **Part C. Keep it from happening again.** The reason this work has historically been thrown away is that nothing captured what was learned. Every definition settled, every rule agreed and every fix made becomes something the business owns and the next AI project stands on, rather than tribal knowledge that leaves when someone does.
 
+## Diligence, before you own it
+
+The three parts above are what happens once the company is yours. Diligence asks a different question, for a different person, at the only moment it can be asked: what are you actually buying?
+
+**A customer base audit.** Cohorts, concentration and payback rebuilt from the event logs or transaction records, with the segments carrying the thesis named. Concentration first, because revenue resting on a few customers is a risk the multiple should price.
+
+**A data condition review.** Which reported numbers come from a system, and which get rebuilt in a spreadsheet every month. Manual processes pass diligence intact and then set the ceiling on the operating plan, because every initiative built on those numbers inherits the manual step.
+
+**An integration cost estimate.** Every add-on is a data integration event and the target's definitions will not match yours. That cost is knowable before you close, and it is usually discovered in month four.
+
+This is diagnosis, not remediation. If everything is in decent shape, that is the finding and you can stop.
+
 ## How you buy it
 
 Three shapes. Which one fits is a question about the work, not about price.
