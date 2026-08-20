@@ -50,7 +50,9 @@ That is an argument about economics, not a payback model. Anyone who hands you o
 
 ## Who I am
 
-I set AI strategy with leadership teams, build the data and systems underneath it, and ship the highest-leverage pieces myself. Six years of that ran inside an international venture firm's portfolio, hands-on across fintech, edtech, pharma and more, which is why I can tell fast whether a problem is structural or just process. Decades of it in all, in the US, Latin America and Europe.
+I set AI strategy with leadership teams, build the data and systems underneath it, and ship the highest-leverage pieces myself. Six years of that ran inside an international venture firm's portfolio, hands-on across fintech, edtech, pharma and more, so I can tell fast whether a problem is structural or just process. That firm had offices and investments in the US, Latin America and Europe.
+
+I have not been setting AI strategy for decades, but I have been building at the boundary between business, software and data for that long.
 
 I sell no software and take no vendor commissions, so when the answer is that a tool you are considering will not do what you need, that is the answer you get. It is the same reason I am useful in the room when two departments are both convinced they are right: I have nothing to defend.
 
