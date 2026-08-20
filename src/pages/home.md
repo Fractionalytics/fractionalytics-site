@@ -18,7 +18,7 @@ They ran the pilot, bought the license, or built the agent, and it worked well e
 
 **A customer count came back 1,600 in one system and 14,000 in another.** The fix was three workflows, two reports and four filters. The analysis that had been blocked behind it ran the same week.
 
-## How the work runs
+## Remediation, when something is already broken
 
 **Part A. Find out what is actually wrong, and stop.** A short, bounded look that ends in a decision rather than a report: what is broken, which of those are costing you something now, and what each would take to fix. If you go on to the build, this comes off the price of it. If you do not, you still own the map.
 
@@ -38,7 +38,7 @@ The three parts above are what happens once the company is yours. Diligence asks
 
 This is diagnosis, not remediation. If everything is in decent shape, that is the finding and you can stop.
 
-## The fractional CDO work
+## Fractional CDO, when it is not one thing
 
 Sometimes it is not one broken thing. What I hear is a version of the same sentence: we want to be data-driven and AI-forward, and we are having trouble getting there.
 
