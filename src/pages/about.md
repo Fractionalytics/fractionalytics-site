@@ -2,10 +2,12 @@
 title: "David Smith"
 eyebrow: "About"
 metaTitle: "About David Smith, Fractional CDO at Fractionalytics"
-description: "David Smith, fractional Chief Data Officer in Coral Gables, Florida. Decades in data across venture, private equity and payments, in the US and Latin America."
+description: "David Smith, fractional CDO. Data strategy, foundations, remediation and customer analytics, across hundreds of companies in the US, Latin America and Europe."
 headshot: "headshot-david.png"
-lede: "I work where a company's AI and analytics ambitions meet the state of its data: strategy, cleanup, due diligence on the data foundation before somebody buys it, and the customer analytics most of it is ultimately for. Who your customers are, what they are worth, which ones come back."
+lede: "Data strategy, foundations, remediation, and customer analytics for companies moving on AI."
 ---
+
+That means the foundation itself, the due diligence on it before somebody buys, and the customer analytics most of it is ultimately for. Who your customers are, what they are worth, which ones come back.
 
 The platform nobody can switch on and outputs nobody trusts are usually symptoms of the same thing, which is that the business has never settled what its own records mean.
 
@@ -26,7 +28,7 @@ Range, and not only across industries.
 
 **Owner and Fractional Chief Data Officer. Coral Gables, FL. Jul 2024 to present.**
 
-Independent data strategy, foundations, cleanup and customer analytics for operating companies. Selected engagements, anonymized:
+Independent data strategy, foundations, remediation and customer analytics for operating companies. Selected engagements, anonymized:
 
 **Consumer software platform, subscription and continuing education (Jul 2024 to Jun 2025).** The company had bought a marketing automation platform and could not switch it on, because its production database and the platform disagreed about more than 300K customer records. Nobody had audited it because nobody had needed to. Ran the reconciliation as a weekly cross-functional loop with the CMO and the product and engineering teams, my analysis flagging what did not agree and their judgment deciding what each record actually was. Six months part time took it from 300K-plus to under 5K and they flipped the switch. The work landed on a Segment CDP implementation feeding Snowflake as the new source of truth, so marketing could build campaigns without engineering in the path. The full account is in [The Unsexy Data Work That Actually Matters](/writing/the-unsexy-data-work-that-actually-matters/).
 

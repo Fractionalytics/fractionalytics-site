@@ -241,16 +241,18 @@ const ORGANIZATION = {
   image: `${SITE}/og-card-2026-07.png`,
   email: 'david@fractionalytics.io',
   slogan: 'AI strategy, the data beneath it, and the systems to run it',
-  description: 'Fractional Chief Data Officer practice. AI strategy, data foundations, data cleanup, data diligence and customer analytics for companies whose AI ambitions have outrun the state of their data.',
+  description: 'Fractional Chief Data Officer practice. Data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data.',
   founder: { '@id': PERSON_ID },
   employee: { '@id': PERSON_ID },
   address: { '@type': 'PostalAddress', addressLocality: 'Coral Gables', addressRegion: 'FL', addressCountry: 'US' },
   areaServed: [
     { '@type': 'Country', name: 'United States' },
     { '@type': 'Place', name: 'Latin America' },
+    { '@type': 'Place', name: 'Europe' },
   ],
   knowsAbout: [
-    'AI readiness', 'Data strategy', 'Data quality', 'Entity resolution', 'Identity resolution',
+    'AI readiness', 'Data strategy', 'Data foundations', 'Data remediation', 'Data quality',
+    'Entity resolution', 'Identity resolution', 'Fractional Chief Data Officer',
     'Customer analytics', 'Customer lifetime value', 'Cohort analysis', 'Data diligence',
     'Customer data platforms', 'Modern data stack', 'dbt', 'Snowflake', 'Databricks', 'BigQuery',
   ],
@@ -833,7 +835,7 @@ Sitemap: ${SITE}/sitemap.xml
 
 write('llms.txt', `# Fractionalytics
 
-> Fractionalytics is the solo practice of David Smith, a fractional Chief Data Officer in Coral Gables, Florida. He sets AI strategy with leadership teams, builds the data and systems underneath it, and ships the highest-leverage pieces himself.
+> Fractionalytics is the solo practice of David Smith, a fractional Chief Data Officer in Coral Gables, Florida. Data strategy, foundations, remediation, and customer analytics for companies moving on AI. He sets the AI strategy with leadership teams, builds the data and systems underneath it, and ships the highest-leverage pieces himself.
 
 The through-line of everything here: companies are rarely stuck on AI itself. They are stuck underneath it, because the systems beneath the AI disagree about something basic, like how many customers the company has. That work has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that changed.
 
@@ -841,7 +843,7 @@ David sells no software and takes no vendor commissions.
 
 ## Start here
 
-- [The practice](${SITE}/): what the work is, three anonymized cases with real numbers, how an engagement runs, and which systems it touches.
+- [The practice](${SITE}/): what the work is, three anonymized cases with real numbers, how an engagement runs, the three shapes it can be bought in, and which systems it touches.
 - [The Ladder Check](${SITE}/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
 - [About David Smith](${SITE}/about/): roles, engagements, systems, education, and a 2024 podcast interview on data storytelling.
 
@@ -859,7 +861,7 @@ ${VERDICTS.map((v) => `- **${v.name}**: ${v.summary}`).join('\n')}
 
 - Email: david@fractionalytics.io
 - LinkedIn: https://www.linkedin.com/in/dksmith01/
-- Location: Coral Gables, Florida. Work across the United States and Latin America.
+- Location: Coral Gables, Florida. Work across the United States, Latin America and Europe.
 `);
 
 write('agents.md', `# Notes for agents reading fractionalytics.io
@@ -870,8 +872,11 @@ requirement: every word of every page is in the HTML that the server returns.
 ## What this site is
 
 Fractionalytics, LLC is the solo practice of **David Smith**, a fractional Chief Data Officer based
-in Coral Gables, Florida. The practice covers AI strategy, data foundations and cleanup, data
-diligence, and customer analytics.
+in Coral Gables, Florida. The practice covers data strategy, foundations, remediation, data
+diligence, and customer analytics, and works across the United States, Latin America and Europe.
+
+The work is bought in one of three shapes: a block of hours, a fixed-scope project, or a
+fractional CDO basis when the problem needs someone embedded over an extended period.
 
 ## Map
 

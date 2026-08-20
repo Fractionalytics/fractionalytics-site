@@ -1,6 +1,6 @@
 # Fractionalytics
 
-> Fractionalytics is the solo practice of David Smith, a fractional Chief Data Officer in Coral Gables, Florida. He sets AI strategy with leadership teams, builds the data and systems underneath it, and ships the highest-leverage pieces himself.
+> Fractionalytics is the solo practice of David Smith, a fractional Chief Data Officer in Coral Gables, Florida. Data strategy, foundations, remediation, and customer analytics for companies moving on AI. He sets the AI strategy with leadership teams, builds the data and systems underneath it, and ships the highest-leverage pieces himself.
 
 The through-line of everything here: companies are rarely stuck on AI itself. They are stuck underneath it, because the systems beneath the AI disagree about something basic, like how many customers the company has. That work has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that changed.
 
@@ -8,7 +8,7 @@ David sells no software and takes no vendor commissions.
 
 ## Start here
 
-- [The practice](https://fractionalytics.io/): what the work is, three anonymized cases with real numbers, how an engagement runs, and which systems it touches.
+- [The practice](https://fractionalytics.io/): what the work is, three anonymized cases with real numbers, how an engagement runs, the three shapes it can be bought in, and which systems it touches.
 - [The Ladder Check](https://fractionalytics.io/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
 - [About David Smith](https://fractionalytics.io/about/): roles, engagements, systems, education, and a 2024 podcast interview on data storytelling.
 
@@ -35,4 +35,4 @@ Full text of every published piece, reproduced from LinkedIn.
 
 - Email: david@fractionalytics.io
 - LinkedIn: https://www.linkedin.com/in/dksmith01/
-- Location: Coral Gables, Florida. Work across the United States and Latin America.
+- Location: Coral Gables, Florida. Work across the United States, Latin America and Europe.

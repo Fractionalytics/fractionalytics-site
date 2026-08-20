@@ -6,8 +6,11 @@ requirement: every word of every page is in the HTML that the server returns.
 ## What this site is
 
 Fractionalytics, LLC is the solo practice of **David Smith**, a fractional Chief Data Officer based
-in Coral Gables, Florida. The practice covers AI strategy, data foundations and cleanup, data
-diligence, and customer analytics.
+in Coral Gables, Florida. The practice covers data strategy, foundations, remediation, data
+diligence, and customer analytics, and works across the United States, Latin America and Europe.
+
+The work is bought in one of three shapes: a block of hours, a fixed-scope project, or a
+fractional CDO basis when the problem needs someone embedded over an extended period.
 
 ## Map
 
