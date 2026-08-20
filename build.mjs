@@ -843,7 +843,7 @@ David sells no software and takes no vendor commissions.
 
 ## Start here
 
-- [The practice](${SITE}/): what the work is, three anonymized cases with real numbers, how a remediation engagement runs, what a pre-acquisition data diligence returns, the three shapes the work can be bought in, and which systems it touches.
+- [The practice](${SITE}/): what the work is, three anonymized cases with real numbers, how a remediation engagement runs, what a pre-acquisition data diligence returns, what the fractional CDO work covers when the whole function needs fixing, the three shapes the work can be bought in, and which systems it touches.
 - [The Ladder Check](${SITE}/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
 - [About David Smith](${SITE}/about/): roles, engagements, systems, education, and a 2024 podcast interview on data storytelling.
 
@@ -882,7 +882,7 @@ fractional CDO basis when the problem needs someone embedded over an extended pe
 
 | Path | What it holds |
 |---|---|
-| \`/\` | The practice: the problem, three anonymized cases, how a remediation engagement runs, data diligence before an acquisition, the three buying shapes, which systems, the economics |
+| \`/\` | The practice: the problem, three anonymized cases, how a remediation engagement runs, data diligence before an acquisition, the fractional CDO work, the three buying shapes, which systems, the economics |
 | \`/diagnostic/\` | The Ladder Check: a six-question self-assessment with four possible results, all four written out in full |
 | \`/writing/\` | Index of ${posts.length} published articles |
 ${posts.map((p) => `| \`${p.href}\` | ${p.title} (${longDate(p.date)}, ~${p.words} words) |`).join('\n')}

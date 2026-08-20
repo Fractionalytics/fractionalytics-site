@@ -38,6 +38,18 @@ The three parts above are what happens once the company is yours. Diligence asks
 
 This is diagnosis, not remediation. If everything is in decent shape, that is the finding and you can stop.
 
+## The fractional CDO work
+
+Sometimes it is not one broken thing. It is a data team that is not doing a good job, and somebody has to fix it. That work is everything, and it starts with a version of the same sentence: our team isn't giving us what we need.
+
+The first work is the team: what it is good at, what is missing, and what has to change.
+
+Then the tool stack, and whether it is the right one. One company had Snowflake with a pile of views built on top and nothing managing any of it. We rebuilt that layer in dbt.
+
+Then the long part, which is getting the data to where the business actually trusts it. They do not trust their dashboards. Finance does not trust what marketing is saying and marketing does not trust what finance is saying, so all they do is argue about the numbers rather than take action and grow their business.
+
+It runs the whole gamut, from how the data comes in, through what gets done to it and which warehouse it lands in, to getting it somewhere trustworthy and automatable, where you can point AI at it or run campaigns off it. And it is as much dealing with people as it is with technology.
+
 ## How you buy it
 
 Three shapes. Which one fits is a question about the work, not about price.

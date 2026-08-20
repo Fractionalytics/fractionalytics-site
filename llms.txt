@@ -8,7 +8,7 @@ David sells no software and takes no vendor commissions.
 
 ## Start here
 
-- [The practice](https://fractionalytics.io/): what the work is, three anonymized cases with real numbers, how a remediation engagement runs, what a pre-acquisition data diligence returns, the three shapes the work can be bought in, and which systems it touches.
+- [The practice](https://fractionalytics.io/): what the work is, three anonymized cases with real numbers, how a remediation engagement runs, what a pre-acquisition data diligence returns, what the fractional CDO work covers when the whole function needs fixing, the three shapes the work can be bought in, and which systems it touches.
 - [The Ladder Check](https://fractionalytics.io/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
 - [About David Smith](https://fractionalytics.io/about/): roles, engagements, systems, education, and a 2024 podcast interview on data storytelling.
 
