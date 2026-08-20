@@ -110,7 +110,11 @@ h2 {
   line-height: 1.22;
   color: var(--brand-blue);
   margin: 2.4em 0 0.7em;
-  max-width: 30ch;
+  /* Headings are held narrower than the 68ch prose measure so display type does not run
+     loose at wide viewports. 40ch is set from measurement, not taste: the longest heading
+     on the site wants 382px and 30ch capped it at 333, so it wrapped with half the text
+     measure sitting empty beside it. 40ch clears every current heading by ~60px. */
+  max-width: 40ch;
 }
 
 h3 {
