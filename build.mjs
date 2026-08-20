@@ -487,10 +487,17 @@ ${html}
   const { meta, body } = parseDoc(fs.readFileSync(path.join(ROOT, 'src/pages/about.md'), 'utf8'));
   const { html } = markdown(body);
   const trail = [{ href: '/', label: 'Home' }, { href: '/about/', label: 'About' }];
-  const bodyHtml = `${crumbsHtml(trail)}
-<article class="prose">
+  // No visible breadcrumb here. The primary nav already underlines "About" and the page title
+  // sits directly beneath it, so a Home / About line above the title is a second answer to a
+  // question nobody asked. The BreadcrumbList JSON-LD stays, because agents do use it.
+  const bodyHtml = `<article class="prose">
+<header class="page-head">
+<div class="page-head-text">
 <p class="eyebrow">${esc(meta.eyebrow)}</p>
 <h1>${esc(meta.title)}</h1>
+</div>
+<img class="headshot" src="/${escAttr(meta.headshot)}" alt="Pen-and-ink stipple portrait of David Smith" width="320" height="320">
+</header>
 <p class="lede">${esc(meta.lede)}</p>
 ${html}
 </article>`;
@@ -543,8 +550,7 @@ ${html}
 <ul class="tags">${p.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
 </li>`).join('\n');
 
-  const bodyHtml = `${crumbsHtml(trail)}
-<div class="prose">
+  const bodyHtml = `<div class="prose">
 <p class="eyebrow">Writing</p>
 <h1>Where AI ambition meets the state of a company's data</h1>
 <p class="lede">Everything below was published first on LinkedIn and is reproduced here in full, so it does not live only on a platform I do not own. Each piece links back to the original, where the comments are.</p>
@@ -703,8 +709,7 @@ ${read}
 </section>`;
   }).join('\n');
 
-  const bodyHtml = `${crumbsHtml(trail)}
-<article>
+  const bodyHtml = `<article>
 <div class="prose">
 <p class="eyebrow">The Ladder Check</p>
 <h1>How far up the ladder do your answers still agree?</h1>

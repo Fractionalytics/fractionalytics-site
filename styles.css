@@ -140,6 +140,33 @@ h3 {
   max-width: 56ch;
 }
 
+/* ---------- page head with a portrait ---------- */
+
+/* The portrait goes at the TOP of the About page, beside the name. On print collateral the
+   hedcut sits in a signature footer because a one-pager has nowhere else to put it; on the web
+   a footer is navigation, and a face down there reads as a stray asset. */
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: var(--measure);
+}
+.page-head-text { min-width: 0; }
+.page-head h1 { margin: 0; }
+
+.headshot {
+  width: 160px;
+  height: 160px;
+  flex: none;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .page-head { flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
+  .headshot { width: 128px; height: 128px; }
+}
+
 /* ---------- text ---------- */
 
 p { margin: 1.05em 0; }
@@ -238,7 +265,7 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
 
 /* ---------- breadcrumbs ---------- */
 
-.crumbs { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 26px; }
+.crumbs { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 8px 0 34px; }
 .crumbs ol { list-style: none; display: flex; gap: 8px; flex-wrap: wrap; padding: 0; margin: 0; }
 .crumbs li { margin: 0; color: var(--paper-400); }
 .crumbs a { color: var(--blue-600); text-decoration: none; }

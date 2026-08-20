@@ -8,11 +8,11 @@ lede: "Companies that already bought the AI keep hitting the same wall: the syst
 
 Most companies I meet are not stuck on AI. They are stuck underneath it.
 
-They ran the pilot, bought the licence, or built the agent, and it worked well enough to raise the ambition. Then the next step needed two systems to agree on something basic, and they did not. Nobody inside the building can say how far off the numbers are, or why, because the people who built the mess left and the logic lives in dashboards, spreadsheets and three people's heads.
+They ran the pilot, bought the license, or built the agent, and it worked well enough to raise the ambition. Then the next step needed two systems to agree on something basic, and they did not. Nobody inside the building can say how far off the numbers are, or why, because the people who built the mess left and the logic lives in dashboards, spreadsheets and three people's heads.
 
 ## What that looks like in practice
 
-**A consumer software company had paid for a marketing platform it could not switch on.** Two upstream systems disagreed about who the customers were by more than 300,000 records. The licence was being paid monthly and returning nothing. The tool was never the problem.
+**A consumer software company had paid for a marketing platform it could not switch on.** Two upstream systems disagreed about who the customers were by more than 300,000 records. The license was being paid monthly and returning nothing. The tool was never the problem.
 
 **At a payments company, finance and growth calculated profit per transaction differently**, millions apart on a single cost line. A new product showed a profit in one report and a loss in the other, and the leadership team could not fund it or kill it.
 
@@ -34,7 +34,7 @@ The warehouses where that data mixes with everything else: **Snowflake, Databric
 
 ## Why the economics changed
 
-Data cleanup has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that moved. The value went up, because clean data is now the difference between an AI initiative that gets believed and one that quietly stops being used. The cost came down, because the archaeology, working out what a system does and why it disagrees with its neighbour, is the part that used to take months of expensive people and is now the part that compresses most.
+Data cleanup has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that moved. The value went up, because clean data is now the difference between an AI initiative that gets believed and one that quietly stops being used. The cost came down, because the archeology, working out what a system does and why it disagrees with its neighbor, is the part that used to take months of expensive people and is now the part that compresses most.
 
 That is an argument about economics, not a payback model. Anyone who hands you one of those before looking at your systems is guessing.
 

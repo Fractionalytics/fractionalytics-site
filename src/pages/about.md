@@ -3,14 +3,24 @@ title: "David Smith"
 eyebrow: "About"
 metaTitle: "About David Smith, Fractional CDO at Fractionalytics"
 description: "David Smith, fractional Chief Data Officer in Coral Gables, Florida. Decades in data across venture, private equity and payments, in the US and Latin America."
-lede: "I work where a company's AI and analytics ambitions meet the state of its data. I am based in Coral Gables, Florida, and Fractionalytics is mine."
+headshot: "headshot-david.png"
+lede: "I work where a company's AI and analytics ambitions meet the state of its data: strategy, cleanup, due diligence on the data foundation before somebody buys it, and the customer analytics most of it is ultimately for. Who your customers are, what they are worth, which ones come back."
 ---
 
-I work where a company's AI and analytics ambitions meet the state of its data: strategy, cleanup, due diligence on the data foundation before somebody buys it, and the customer analytics most of it is ultimately for. Who your customers are, what they are worth, which ones come back. The platform nobody can switch on and outputs nobody trusts are usually symptoms of the same thing, which is that the business has never settled what its own records mean.
+The platform nobody can switch on and outputs nobody trusts are usually symptoms of the same thing, which is that the business has never settled what its own records mean.
 
 Decades of this across hundreds of companies' data and data stacks, most of it during due diligence or portfolio work at a venture fund, is where the pattern recognition comes from, and it is what makes the models useful rather than merely fast. Anyone can ask a frontier model what is wrong with a system. Knowing which of its answers will survive contact with the person who built that system is the job. On a recent diagnostic the model did nearly all of the digging, and about a dozen judgment calls of mine decided whether six weeks of its output became a trusted executive readout or a fourth consultant's unread PDF.
 
 The rest is people, and it is where this work usually fails. Nobody wants to be told their numbers are wrong, and the answers only hold when the people who own the systems are the ones deciding what a record means. I learn a new business fast because that part is the fun of it, and I would rather build something smarter than something anyone could have built.
+
+## What I bring
+
+Range, and not only across industries.
+
+- **Across domains.** Enterprise software, startups, data science, and now production AI, learning each domain fast and pushing until it works.
+- **Across the stack.** Enterprise-grade (Databricks, Snowflake, BigQuery) to scrappy startups (Postgres, Metabase), right-sized to your problem and budget.
+- **Across hundreds of companies.** Six years inside an international venture firm's portfolio, hands-on across fintech, edtech, pharma, and more, so I tell fast whether a problem is structural or just process.
+- **Across strategy and build.** I am the rare person who sets the C-level strategy, leads the team that executes it, and builds the highest-leverage pieces myself. An engineering degree, an MBA, and decades building let me hold the business case and the technical detail in one conversation, so nothing is lost between the strategy and the delivery.
 
 ## Fractionalytics, LLC
 

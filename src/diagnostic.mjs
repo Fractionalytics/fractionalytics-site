@@ -115,7 +115,7 @@ export const VERDICTS = [
     summary: 'The count and the definition hold. Getting to the number still needs a human in the loop.',
     body: [
       'The organization agrees on the answer; it just cannot reach it without going through a person. That is the cheapest of the three failure modes to fix, and it is often weeks rather than months.',
-      'It is also the outcome most likely to be misdiagnosed as a data problem and sold to you as one. Before anybody proposes a cleanup, make them show you which records are actually wrong. If the answer is none, you have a plumbing job, not an archaeology job.',
+      'It is also the outcome most likely to be misdiagnosed as a data problem and sold to you as one. Before anybody proposes a cleanup, make them show you which records are actually wrong. If the answer is none, you have a plumbing job, not an archeology job.',
     ],
   },
   {
@@ -144,7 +144,7 @@ export const VERDICTS = [
 
 export const AUTHORITY_NOTE = {
   heading: 'One more thing, from question 6',
-  body: 'You said the last disagreement was settled by seniority, or that it quietly went away. That is worth separating out, because it is not a data problem and no amount of cleanup will touch it. When the senior number wins, the organization has learned that checking is not what settles things, and it will learn that again next quarter. Fixing the records is necessary here and it is not sufficient.',
+  body: 'You said the last disagreement was settled by seniority, or that it went away on its own. That is worth separating out, because it is not a data problem and no amount of cleanup will touch it. When the senior number wins, the organization has learned that checking is not what settles things, and it will learn that again next quarter. Fixing the records is necessary here and it is not sufficient.',
 };
 
 // Ordered rules, most expensive failure first. The wording of each trigger comes straight from
