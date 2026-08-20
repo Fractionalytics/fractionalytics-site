@@ -46,11 +46,11 @@ I sell no software and take no vendor commissions, so when the answer is that a 
 
 [More about how I got here](/about/), including the roles, the systems and the education behind it.
 
-## Start with the six questions
+## Start with the Ladder Check
 
-There is a short self-assessment on this site that takes about three minutes and ends in a named result rather than a score. One person can answer all six from memory, with no meeting and no data pull, and one of the outcomes is that you are fine and should go spend the money on the AI itself.
+The Ladder Check is a short self-assessment on this site that takes about three minutes and ends in a named result rather than a score. One person can answer all six from memory, with no meeting and no data pull, and one of the outcomes is that you are fine and should go spend the money on the AI itself.
 
-[Take the self-assessment](/diagnostic/)
+[Take the Ladder Check](/diagnostic/)
 
 ## Read the argument
 

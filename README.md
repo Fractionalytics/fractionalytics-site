@@ -60,7 +60,10 @@ crawler requests execute no JavaScript, so anything a script builds is invisible
 **2. The markup stays thin.** CSS and the favicon are separate files rather than inlined, because
 inlining them buries the text in a page that is mostly not text.
 
-## The self-assessment
+## The Ladder Check
+
+The self-assessment is called **The Ladder Check** (named 2026-08-20). The page heading stays
+the question itself; the name is what it is called in the nav, in `llms.txt` and out loud.
 
 `src/diagnostic.mjs` is the single source of truth. `build.mjs` writes the scoring function into
 `diagnostic.js` from that file rather than a second copy, and the client script clones the result

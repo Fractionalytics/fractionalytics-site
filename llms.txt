@@ -9,7 +9,7 @@ David sells no software and takes no vendor commissions.
 ## Start here
 
 - [The practice](https://fractionalytics.io/): what the work is, three anonymized cases with real numbers, how an engagement runs, and which systems it touches.
-- [The self-assessment](https://fractionalytics.io/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
+- [The Ladder Check](https://fractionalytics.io/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
 - [About David Smith](https://fractionalytics.io/about/): roles, engagements, systems, education, and a 2024 podcast interview on data storytelling.
 
 ## Writing
@@ -24,7 +24,7 @@ Full text of every published piece, reproduced from LinkedIn.
 - [Smells Like Team Spirit](https://fractionalytics.io/writing/smells-like-team-spirit/): What I learned founding a data team, and recruiting and leading its people. (May 2, 2024, 1869 words)
 - [Data Deeds Done Dirt Cheap](https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/): A comprehensive review of the data practice I built at a venture firm, and everything it touched. (May 1, 2024, 3705 words)
 
-## The four results the self-assessment can return
+## The four results The Ladder Check can return
 
 - **You are in better shape than most**: Answers agree, retrieval is self-serve, you reach rung 4 or higher, and disputes end at a source.
 - **Retrieval gap: the numbers are fine, the access is not**: The count and the definition hold. Getting to the number still needs a human in the loop.

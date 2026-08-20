@@ -14,7 +14,7 @@ diligence, and customer analytics.
 | Path | What it holds |
 |---|---|
 | `/` | The practice: the problem, three anonymized cases, how the work runs, which systems, the economics |
-| `/diagnostic/` | A six-question self-assessment with four possible results, all four written out in full |
+| `/diagnostic/` | The Ladder Check: a six-question self-assessment with four possible results, all four written out in full |
 | `/writing/` | Index of 7 published articles |
 | `/writing/customer-analytics-is-worth-another-look/` | Customer Analytics Is Worth Another Look (August 17, 2026, ~1484 words) |
 | `/writing/how-many-customers-do-you-have/` | How Many Customers Do You Have? (August 10, 2026, ~1933 words) |

@@ -218,7 +218,7 @@ function parseDoc(raw) {
 
 const NAV = [
   { href: '/', label: 'Practice' },
-  { href: '/diagnostic/', label: 'Self-assessment' },
+  { href: '/diagnostic/', label: 'The Ladder Check' },
   { href: '/writing/', label: 'Writing' },
   { href: '/about/', label: 'About' },
 ];
@@ -378,7 +378,7 @@ ${o.body}
 <h2>Fractionalytics</h2>
 <ul>
 <li><a href="/">The practice</a></li>
-<li><a href="/diagnostic/">The self-assessment</a></li>
+<li><a href="/diagnostic/">The Ladder Check</a></li>
 <li><a href="/writing/">Writing</a></li>
 <li><a href="/about/">About David Smith</a></li>
 </ul>
@@ -560,7 +560,7 @@ ${html}
 ${items}
 </ol>
 <div class="prose">
-<p>There is also a <a href="/diagnostic/">six-question self-assessment</a> built out of the first two pieces, if you would rather answer questions about your own company than read about somebody else's.</p>
+<p>There is also <a href="/diagnostic/">The Ladder Check</a>, a six-question self-assessment built out of the first two pieces, if you would rather answer questions about your own company than read about somebody else's.</p>
 </div>`;
 
   write('writing/index.html', layout({
@@ -611,7 +611,7 @@ posts.forEach((p, idx) => {
     newer ? `<li>Next: <a href="${newer.href}">${esc(newer.title)}</a></li>` : '',
     older ? `<li>Previous: <a href="${older.href}">${esc(older.title)}</a></li>` : '',
     `<li><a href="/writing/">All writing</a></li>`,
-    `<li><a href="/diagnostic/">The six-question self-assessment</a></li>`,
+    `<li><a href="/diagnostic/">The Ladder Check, a six-question self-assessment</a></li>`,
   ].filter(Boolean).join('');
 
   const bodyHtml = `${crumbsHtml(trail)}
@@ -673,7 +673,7 @@ ${p.html}
 /* -------------------------------------------------------------- diagnostic */
 
 {
-  const trail = [{ href: '/', label: 'Home' }, { href: '/diagnostic/', label: 'Self-assessment' }];
+  const trail = [{ href: '/', label: 'Home' }, { href: '/diagnostic/', label: 'The Ladder Check' }];
 
   const questionsHtml = QUESTIONS.map((q) => {
     const ladder = q.ladder
@@ -706,7 +706,7 @@ ${read}
   const bodyHtml = `${crumbsHtml(trail)}
 <article>
 <div class="prose">
-<p class="eyebrow">Self-assessment</p>
+<p class="eyebrow">The Ladder Check</p>
 <h1>How far up the ladder do your answers still agree?</h1>
 <p class="lede">Six questions, about three minutes, answerable by one person from memory. No meeting, no data pull, nobody else told. It ends in a named result rather than a score, and one of the results is that you are fine.</p>
 
@@ -753,7 +753,7 @@ ${verdictsHtml}
 
   write('diagnostic/index.html', layout({
     href: '/diagnostic/',
-    metaTitle: 'Six-question data self-assessment for AI readiness',
+    metaTitle: 'The Ladder Check: a six-question data self-assessment',
     description: 'Six questions, three minutes, one person, no data pull. A self-assessment that ends in a named result rather than a score. One of the results is that you are fine.',
     body: bodyHtml,
     trail,
@@ -763,7 +763,7 @@ ${verdictsHtml}
         '@type': 'WebPage',
         '@id': `${SITE}/diagnostic/#webpage`,
         url: `${SITE}/diagnostic/`,
-        name: 'Six-question data self-assessment for AI readiness',
+        name: 'The Ladder Check: a six-question data self-assessment',
         description: 'A six-question self-assessment of whether a company\'s own systems still agree about the basics.',
         isPartOf: { '@id': SITE_ID },
         inLanguage: 'en-US',
@@ -837,7 +837,7 @@ David sells no software and takes no vendor commissions.
 ## Start here
 
 - [The practice](${SITE}/): what the work is, three anonymized cases with real numbers, how an engagement runs, and which systems it touches.
-- [The self-assessment](${SITE}/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
+- [The Ladder Check](${SITE}/diagnostic/): six questions, three minutes, answerable by one person from memory. Ends in one of four named results rather than a score. One of the four is that the company is fine and should spend the money on AI instead.
 - [About David Smith](${SITE}/about/): roles, engagements, systems, education, and a 2024 podcast interview on data storytelling.
 
 ## Writing
@@ -846,7 +846,7 @@ Full text of every published piece, reproduced from LinkedIn.
 
 ${posts.map((p) => `- [${p.title}](${SITE}${p.href}): ${p.dek} (${longDate(p.date)}, ${p.words} words)`).join('\n')}
 
-## The four results the self-assessment can return
+## The four results The Ladder Check can return
 
 ${VERDICTS.map((v) => `- **${v.name}**: ${v.summary}`).join('\n')}
 
@@ -873,7 +873,7 @@ diligence, and customer analytics.
 | Path | What it holds |
 |---|---|
 | \`/\` | The practice: the problem, three anonymized cases, how the work runs, which systems, the economics |
-| \`/diagnostic/\` | A six-question self-assessment with four possible results, all four written out in full |
+| \`/diagnostic/\` | The Ladder Check: a six-question self-assessment with four possible results, all four written out in full |
 | \`/writing/\` | Index of ${posts.length} published articles |
 ${posts.map((p) => `| \`${p.href}\` | ${p.title} (${longDate(p.date)}, ~${p.words} words) |`).join('\n')}
 | \`/about/\` | David Smith: roles, engagements, systems, education, interviews |
