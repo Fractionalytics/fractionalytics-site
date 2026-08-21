@@ -111,9 +111,18 @@ h2 {
   color: var(--brand-blue);
   margin: 2.4em 0 0.7em;
   /* Headings are held narrower than the 68ch prose measure so display type does not run
-     loose at wide viewports. 40ch is set from measurement, not taste: the longest heading
-     on the site wants 382px and 30ch capped it at 333, so it wrapped with half the text
-     measure sitting empty beside it. 40ch clears every current heading by ~60px. */
+     loose at wide viewports.
+
+     40ch DELIBERATELY BINDS, and the earlier comment here claimed otherwise. It said "40ch
+     clears every current heading by ~60px", which was true of the practice page and false of
+     the site: three h2s in the Unsexy article want 49.1ch, 56.6ch and 62.6ch, all of which fit
+     inside the 68ch measure and wrap only because of this cap. Those are David's published
+     article titles, long and sentence-shaped, and two lines is right for them. Short editorial
+     headings on the other pages stay on one line.
+
+     So this cap is BINDING BY INTENT, not derived from the longest content, and `node build.mjs`
+     knows the difference: see HEADING_CAPS there, which warns on derived caps and stays quiet on
+     binding ones. Change the intent flag there if you change the number here. */
   max-width: 40ch;
 }
 
