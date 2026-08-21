@@ -38,7 +38,14 @@ Independent data strategy, foundations, remediation and customer analytics for o
 
 **Head of Data and AI, co-founder. Coral Gables, FL. Dec 2025 to present.**
 
-A separate AI consulting partnership, co-founded with a colleague, where I lead delivery end to end: discovery, architecture, deployment and monitoring. Blue Collar AI Labs is its own company and its client work is not Fractionalytics work.
+A separate AI consulting partnership, co-founded with a colleague, where I lead delivery end to end: discovery, architecture, deployment and monitoring. Blue Collar AI Labs is [its own company](https://bluecollarailabs.com/) and its client work is not Fractionalytics work.
+
+The work below is for one client, a private-equity-backed disaster recovery services company.
+
+- **Sales conversation intelligence.** An hourly pipeline moving Salesloft calls and transcripts into Azure SQL with speaker-role attribution and idempotent recovery; an LLM workflow scoring every rep call against the client's own sales methodology into structured coaching insights; and an evaluation framework that measures and improves that scoring.
+- **Account monitoring.** GPT-4o classification over daily news and event ingestion on Azure Functions, scanning the full customer base for acquisition and churn signals. The first three months in production flagged 5.7% of monthly recurring revenue as at-risk due solely to M&A activity. What had been a reactive account-review process became a daily prompted one. Live to customer success managers since May 2026.
+- **Service delivery automation.** An MCP server on Azure Functions wired into Microsoft 365 Copilot, SharePoint and Azure OpenAI, turning a multi-day manual expert process into a structured, human-reviewed pipeline with automated quality scoring. Covers 100-plus tabletop exercises a year.
+- **Salesforce audit.** The company's own systems could not agree on how many customers it had. The model did most of the digging; roughly a dozen judgment calls that determined the answer were mine.
 
 ## TheVentureCity
 

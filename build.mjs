@@ -523,12 +523,15 @@ const posts = postFiles.map((f) => {
 {
   const { meta, body } = parseDoc(fs.readFileSync(path.join(ROOT, 'src/pages/home.md'), 'utf8'));
   const { html } = markdown(body);
-  const bodyHtml = `<article class="prose">
-<p class="eyebrow">${esc(meta.eyebrow)}</p>
+  // The home page is the practice's front door, not an article. It deliberately does
+  // NOT use the eyebrow/<article> treatment every post on this site uses: rendered that
+  // way it read as one more blog post and never said what Fractionalytics is (2026-08-21).
+  const bodyHtml = `<div class="prose pagehead">
 <h1>${esc(meta.title)}</h1>
+${meta.identity ? `<p class="identity">${esc(meta.identity)}</p>` : ''}
 <p class="lede">${esc(meta.lede)}</p>
 ${html}
-</article>`;
+</div>`;
 
   write('index.html', layout({
     href: '/',
@@ -614,6 +617,10 @@ ${html}
 
 /* --------------------------------------------------------- writing (index) */
 
+// Single source for the /writing headline: the visible <h1> and the Blog JSON-LD name
+// have to agree or the page scores a contradiction. They had drifted apart (2026-08-21).
+const WRITING_H1 = "Where AI ambition meets the state of a company's data";
+
 {
   const trail = [{ href: '/', label: 'Home' }, { href: '/writing/', label: 'Writing' }];
   const items = posts.map((p) => `<li>
@@ -625,20 +632,18 @@ ${html}
 
   const bodyHtml = `<div class="prose">
 <p class="eyebrow">Writing</p>
-<h1>Where AI ambition meets the state of a company's data</h1>
+<h1>${esc(WRITING_H1)}</h1>
 <p class="lede">Everything below was published first on LinkedIn and is reproduced here in full, so it does not live only on a platform I do not own. Each piece links back to the original, where the comments are.</p>
-
-<h2 id="where-to-start">Where to start</h2>
-<p>If you have one of these in you, make it the current argument. <a href="/writing/how-many-customers-do-you-have/">How Many Customers Do You Have?</a> is the piece the rest of the practice hangs off: the ladder of business questions, and the claim that how far up it you get before the answers stop agreeing is the most useful read on AI readiness I know. <a href="/writing/customer-analytics-is-worth-another-look/">Customer Analytics Is Worth Another Look</a> is its sequel, and it argues the economics rather than the diagnosis.</p>
-<p>If you would rather see the work than the argument, read <a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a>. It is the full account of a six-month reconciliation that took a customer-record mismatch from over 300,000 to under 5,000 and let a company finally switch on the platform it had been paying for.</p>
-<p>The three pieces from May 2024 are a different kind of document: written at the end of six years running data inside a venture fund, they are the record of what that practice covered and what it taught. They are longer, older, and where most of the pattern recognition comes from.</p>
-
-<h2 id="all-pieces">Everything, newest first</h2>
 </div>
 <ol class="post-list">
 ${items}
 </ol>
 <div class="prose">
+<h2 id="where-to-start">Where to start</h2>
+<p>If you have one of these in you, make it the current argument. <a href="/writing/how-many-customers-do-you-have/">How Many Customers Do You Have?</a> is the piece the rest of the practice hangs off: the ladder of business questions, and the claim that how far up it you get before the answers stop agreeing is the most useful read on AI readiness I know. <a href="/writing/customer-analytics-is-worth-another-look/">Customer Analytics Is Worth Another Look</a> is its sequel, and it argues the economics rather than the diagnosis.</p>
+<p>If you would rather see the work than the argument, read <a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a>. It is the full account of a six-month reconciliation that took a customer-record mismatch from over 300,000 to under 5,000 and let a company finally switch on the platform it had been paying for.</p>
+<p>The three pieces from May 2024 are a different kind of document: written at the end of six years running data inside a venture fund, they are the record of what that practice covered and what it taught. They are longer, older, and where most of the pattern recognition comes from.</p>
+
 <p>There is also <a href="/diagnostic/">The Ladder Check</a>, a six-question self-assessment built out of the first two pieces, if you would rather answer questions about your own company than read about somebody else's.</p>
 </div>`;
 
@@ -652,7 +657,7 @@ ${items}
       '@type': 'Blog',
       '@id': `${SITE}/writing/#blog`,
       url: `${SITE}/writing/`,
-      name: 'Fractionalytics writing',
+      name: WRITING_H1, // must match the visible <h1>, or Machineview flags a contradiction
       description: 'Published writing by David Smith on AI readiness, data quality and customer analytics.',
       inLanguage: 'en-US',
       datePublished: posts[posts.length - 1].date,
@@ -784,10 +789,11 @@ ${read}
 </section>`;
   }).join('\n');
 
+  const DIAGNOSTIC_H1 = 'How far up the ladder do your answers still agree?';
   const bodyHtml = `<article>
 <div class="prose">
 <p class="eyebrow">The Ladder Check</p>
-<h1>How far up the ladder do your answers still agree?</h1>
+<h1>${esc(DIAGNOSTIC_H1)}</h1>
 <p class="lede">Six questions, about three minutes, answerable by one person from memory. No meeting, no data pull, nobody else told. It ends in a named result rather than a score, and one of the results is that you are fine.</p>
 
 <h2 id="how-it-works">What this is</h2>
@@ -843,7 +849,7 @@ ${verdictsHtml}
         '@type': 'WebPage',
         '@id': `${SITE}/diagnostic/#webpage`,
         url: `${SITE}/diagnostic/`,
-        name: 'The Ladder Check: a six-question data self-assessment',
+        name: DIAGNOSTIC_H1, // must match the visible <h1>, not the <title>
         description: 'A six-question self-assessment of whether a company\'s own systems still agree about the basics.',
         isPartOf: { '@id': SITE_ID },
         inLanguage: 'en-US',

@@ -153,6 +153,18 @@ h3 {
   max-width: 56ch;
 }
 
+/* The identity line: what this company is, stated plainly under the H1. Home page
+   only. Set above the lede so the first thing after the headline is an answer to
+   "what is this?" rather than the start of an argument. */
+.identity {
+  font-size: 1.28rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ink, var(--blue-700));
+  margin-top: 20px;
+  max-width: 54ch;
+}
+
 /* ---------- page head with a portrait ---------- */
 
 /* The portrait goes at the TOP of the About page, beside the name. On print collateral the
