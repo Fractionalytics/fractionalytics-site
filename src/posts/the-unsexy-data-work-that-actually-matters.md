@@ -5,6 +5,9 @@ date: 2025-10-21
 origin: https://www.linkedin.com/pulse/unsexy-data-work-actually-matters-how-we-fixed-300k-mismatches-smith-gt1we/
 tags: ["case study","data quality","CDP"]
 ---
+
+[IMAGE. File: unsexy-meme-clean-the-data.png Alt: Cartoon meme. A speaker asks a crowd "Who wants clean data?" and every hand goes up. He then asks "Who wants to CLEAN the data?" and every hand goes down.]
+
 The marketing team was excited. We'd just implemented Segment's Linked Audiences—a powerful no-code campaign creator that would let them build sophisticated customer segments from our Snowflake data warehouse and launch campaigns without waiting on engineering.
 
 There was just one problem: we couldn't turn it on.

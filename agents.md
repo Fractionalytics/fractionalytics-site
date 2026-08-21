@@ -22,7 +22,7 @@ fractional CDO basis when the problem needs someone embedded over an extended pe
 | `/writing/customer-analytics-is-worth-another-look/` | Customer Analytics Is Worth Another Look (August 17, 2026, ~1484 words) |
 | `/writing/how-many-customers-do-you-have/` | How Many Customers Do You Have? (August 10, 2026, ~1933 words) |
 | `/writing/the-more-ambitious-you-get-with-ai/` | The more ambitious you get with AI, the faster you hit a wall (July 7, 2026, ~658 words) |
-| `/writing/the-unsexy-data-work-that-actually-matters/` | The Unsexy Data Work That Actually Matters (October 21, 2025, ~2272 words) |
+| `/writing/the-unsexy-data-work-that-actually-matters/` | The Unsexy Data Work That Actually Matters (October 21, 2025, ~2310 words) |
 | `/writing/look-at-the-stars/` | Look at the Stars, Look How They Shine for You (May 15, 2024, ~2780 words) |
 | `/writing/smells-like-team-spirit/` | Smells Like Team Spirit (May 2, 2024, ~1873 words) |
 | `/writing/data-deeds-done-dirt-cheap/` | Data Deeds Done Dirt Cheap (May 1, 2024, ~3709 words) |

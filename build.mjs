@@ -167,17 +167,27 @@ export function markdown(src) {
       while (i < lines.length && lines[i].trim()) { buf2.push(lines[i].trim()); i++; }
       const whole = buf2.join(' ').replace(/^\[/, '').replace(/\]$/, '');
       const capMatch = /Caption:\s*(.*)$/i.exec(whole);
-      const caption = (capMatch ? capMatch[1].trim() : whole.replace(/^IMAGE[.:]\s*/i, '')).replace(/\s*File:\s*[\w.-]+\s*/i, ' ').trim();
+      // No `Caption:` and an `Alt:` present means the figure is deliberately uncaptioned, so the
+      // caption must be EMPTY rather than falling back to the whole marker. The first version fell
+      // back and printed the alt text as a visible caption under the meme.
+      const hasAlt = /Alt:/i.test(whole);
+      const caption = capMatch
+        ? capMatch[1].trim()
+        : (hasAlt ? '' : whole.replace(/^IMAGE[.:]\s*/i, '').replace(/\s*File:\s*[\w.-]+\s*/i, ' ').trim());
       // 2026-08-21: the actual images were recovered from David's own LinkedIn PDF exports of
       // these articles, so a marker carrying `File: <name>` now renders the real picture. The
       // caption-only fallback below stays for the markers whose file is still missing: an honest
       // "there was a figure here" beats inventing one, and beats dropping the line silently.
       const fileMatch = /File:\s*([\w.-]+)/i.exec(whole);
       if (fileMatch) {
-        const alt = caption.replace(/"/g, '&quot;');
+        // Alt: falls back to `Alt:` when there is no caption. Some figures carry their own text
+        // (the meme) and a caption under them would be either redundant or, worse, words nobody
+        // wrote putting a gloss on David's article.
+        const altMatch = /Alt:\s*([^\]]*?)(?:\s*Caption:|$)/i.exec(whole);
+        const altText = (altMatch ? altMatch[1] : caption).trim().replace(/"/g, '&quot;');
         out.push(`<figure class="figure-img">
-<img src="/writing/img/${fileMatch[1]}" alt="${alt}" loading="lazy" decoding="async">
-<figcaption>${inline(caption)}</figcaption>
+<img src="/writing/img/${fileMatch[1]}" alt="${altText}" loading="lazy" decoding="async">
+${caption ? `<figcaption>${inline(caption)}</figcaption>` : ''}
 </figure>`);
         continue;
       }

@@ -53,7 +53,7 @@ At one point we attempted to make "have more fun" one of our half-yearly objecti
 
 Instead of formalizing fun, we kept the atmosphere upbeat and incorporated light-hearted elements like nicknames. That's where my "David the Data Dude" moniker comes from (everyone on the team got a similarly alliterative nickname). Our weekly meetings always included reminders about why we were there: to have fun and excel at our work. We started asking each other, "What would this <arduous task> look like if it were fun?"
 
-[IMAGE. File: team-spirit-band.jpg Caption: What would this staged team photo look like if it were fun?]
+[IMAGE. File: team-spirit-iguana.jpg Caption: What would this staged team photo look like if it were fun?]
 
 ## Link a Mission to the Work
 
