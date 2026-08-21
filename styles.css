@@ -480,3 +480,26 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
   .homebody { padding-top: 38px; }
   .homebody .prose > h2 { margin-top: 42px; }
 }
+
+/* ---------- recovered article figures ---------- */
+/* The images from the LinkedIn originals, restored 2026-08-21 from David's own PDF exports.
+   Full content width rather than the prose measure, because the Venns carry small labels. */
+.figure-img {
+  margin: 32px 0;
+  max-width: 100%;
+}
+.figure-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: #fff;
+}
+.figure-img figcaption {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--paper-600);
+  margin-top: 10px;
+  max-width: 62ch;
+}

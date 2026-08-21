@@ -100,7 +100,7 @@ However, we had to be selective with deep dives into CLV and unit economics anal
 
 Another way CLV-inspired analysis helped was to make simple time series plots in Tableau or Count showing a dot every time a customer purchased.
 
-[IMAGE. Caption: Each customer's time series is on its own row and the size of the circle represents the relative dollars spent]
+[IMAGE. File: deeds-customer-timeseries.png Caption: Each customer's time series is on its own row and the size of the circle represents the relative dollars spent]
 
 It's not exactly cutting-edge data science, but on some occasions, simply visualizing customer activity in this way helped identify purchasing patterns that triggered ideas in a founder's mind. I recommend it.
 

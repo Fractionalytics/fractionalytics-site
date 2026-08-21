@@ -167,7 +167,20 @@ export function markdown(src) {
       while (i < lines.length && lines[i].trim()) { buf2.push(lines[i].trim()); i++; }
       const whole = buf2.join(' ').replace(/^\[/, '').replace(/\]$/, '');
       const capMatch = /Caption:\s*(.*)$/i.exec(whole);
-      const caption = capMatch ? capMatch[1].trim() : whole.replace(/^IMAGE[.:]\s*/i, '');
+      const caption = (capMatch ? capMatch[1].trim() : whole.replace(/^IMAGE[.:]\s*/i, '')).replace(/\s*File:\s*[\w.-]+\s*/i, ' ').trim();
+      // 2026-08-21: the actual images were recovered from David's own LinkedIn PDF exports of
+      // these articles, so a marker carrying `File: <name>` now renders the real picture. The
+      // caption-only fallback below stays for the markers whose file is still missing: an honest
+      // "there was a figure here" beats inventing one, and beats dropping the line silently.
+      const fileMatch = /File:\s*([\w.-]+)/i.exec(whole);
+      if (fileMatch) {
+        const alt = caption.replace(/"/g, '&quot;');
+        out.push(`<figure class="figure-img">
+<img src="/writing/img/${fileMatch[1]}" alt="${alt}" loading="lazy" decoding="async">
+<figcaption>${inline(caption)}</figcaption>
+</figure>`);
+        continue;
+      }
       out.push(`<figure class="figure-note">
 <figcaption><span class="stamp">Figure, in the original</span> ${inline(caption)}</figcaption>
 </figure>`);

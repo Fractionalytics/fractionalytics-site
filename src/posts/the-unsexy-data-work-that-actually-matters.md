@@ -75,7 +75,7 @@ I built a Venn diagram dashboard that updated weekly and showed:
 - Records reconciled between the systems (overlap, in grey)
 - Records in the production database but not found in the marketing platform ("Orange Zone")
 
-[IMAGE: the Venn diagram at project start. Caption: At the outset of the cleanup project, a large percentage of customers did not have matching IDs in the marketing automation system. We called this the "Orange Zone," and our job was to shrink it.]
+[IMAGE. File: unsexy-venn-start.png Caption: At the outset of the cleanup project, a large percentage of customers did not have matching IDs in the marketing automation system. We called this the "Orange Zone," and our job was to shrink it.]
 
 Our job was to reduce the "Orange Zone" as much as possible. The total mismatch count appeared at the top in large numbers. Every week, that number changed.
 
@@ -172,7 +172,7 @@ Data leadership isn't just technical—it's organizational. The best CDOs I know
 
 The Venn diagram dashboard was our secret weapon.
 
-[IMAGE: the Venn diagram later in the project. Caption: After some time, the "Orange Zone" of mismatched customers reduced in size]
+[IMAGE. File: unsexy-venn-later.png Caption: After some time, the "Orange Zone" of mismatched customers reduced in size]
 
 It transformed a problem that felt overwhelming and abstract into something concrete and measurable: the "Orange Zone." Everyone could see the same numbers. Everyone could track progress (or lack of it). There was no room for ambiguity about whether we were succeeding.
 
