@@ -735,6 +735,20 @@ ${r.quote ? `<blockquote><p>${esc(r.quote)}</p></blockquote>` : ''}
     body: bodyHtml,
     trail,
     ld: [{
+      // A CollectionPage (a WebPage subtype) named for the <title>. /writing previously declared
+      // only a Blog, which is a CreativeWork, so there was no page-level WebPage entity at all.
+      // /about declares a ProfilePage named for its title and is the one page with no
+      // contradiction flag and 18/18 semantics (2026-08-21).
+      '@type': 'CollectionPage',
+      '@id': `${SITE}/writing/#webpage`,
+      url: `${SITE}/writing/`,
+      name: WRITING_META_TITLE,
+      description: "Full text of David Smith's published writing on AI readiness, data quality, identity resolution and customer analytics, from 2024 to today.",
+      isPartOf: { '@id': SITE_ID },
+      about: { '@id': ORG_ID },
+      inLanguage: 'en-US',
+      mainEntity: { '@id': `${SITE}/writing/#blog` },
+    }, {
       '@type': 'Blog',
       '@id': `${SITE}/writing/#blog`,
       url: `${SITE}/writing/`,
@@ -989,6 +1003,9 @@ ${verdictsHtml}
       {
         '@type': 'FAQPage',
         '@id': `${SITE}/diagnostic/#faq`,
+        // Named: an unnamed WebPage-subtype node reads as a page entity that disagrees with the
+        // <title>, which is the likeliest cause of the contradiction flag here.
+        name: DIAGNOSTIC_META_TITLE,
         mainEntity: QUESTIONS.map((q) => ({
           '@type': 'Question',
           name: q.question,
