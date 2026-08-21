@@ -62,11 +62,13 @@ Data is a business discipline much more than it is a technical one.
 
 Three shapes. Which one fits is a question about the work, not about price.
 
-**A block of hours.** Time and materials. Right for spot work, and for a problem nobody has scoped yet.
+| Shape | When it fits |
+|---|---|
+| **A block of hours** | Time and materials. Spot work, and problems nobody has scoped yet. |
+| **A fixed-scope project** | A statement of work, with the measurement agreed before it starts. Right once Part A has told us what we are actually fixing. |
+| **A fractional CDO basis** | When the problem is pervasive enough to need someone embedded with your team over an extended period, rather than a bounded piece handed back at the end. |
 
-**A fixed-scope project.** A statement of work, with the measurement agreed before it starts. Right once Part A has told us what we are actually fixing.
-
-**A fractional CDO basis.** Right when the problem is pervasive enough to need someone embedded with your team over an extended period, rather than a bounded piece handed back at the end. It depends on what we are trying to accomplish.
+Which of the three it is depends on what we are trying to accomplish, and that is a conversation rather than a form.
 
 ## Where the work happens
 
@@ -98,6 +100,8 @@ The Ladder Check is a short self-assessment on this site that takes about three 
 
 ## Read the argument
 
-I write about where AI ambition meets the state of a company's data. The current series runs through [how far up the ladder a company can get before its answers stop agreeing](/writing/how-many-customers-do-you-have/), and [what changed in the economics of customer analytics](/writing/customer-analytics-is-worth-another-look/).
+I write about where AI ambition meets the state of a company's data. The current series runs through [how far up the ladder a company can get before its answers stop agreeing](/writing/how-many-customers-do-you-have/), and [what changed in the economics of customer analytics](/writing/customer-analytics-is-worth-another-look/). Before either of those, [the more ambitious you get with AI, the faster you hit a wall](/writing/the-more-ambitious-you-get-with-ai/) is the short version of why any of this matters.
+
+For the work rather than the argument, [the unsexy data work that actually matters](/writing/the-unsexy-data-work-that-actually-matters/) is the full account of a six-month remediation, and [look at the stars](/writing/look-at-the-stars/) is where the customer analytics thinking started.
 
 [All writing](/writing/)

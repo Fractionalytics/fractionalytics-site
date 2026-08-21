@@ -21,7 +21,7 @@ import { QUESTIONS, VERDICTS, AUTHORITY_NOTE, verdictFor } from './src/diagnosti
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://fractionalytics.io';
 const AUTHOR = 'David Smith';
-const BUILT = '2026-08-20';
+const BUILT = '2026-08-21';
 
 /* ------------------------------------------------------------------ helpers */
 
@@ -479,6 +479,8 @@ ${html}
       about: { '@id': ORG_ID },
       primaryImageOfPage: `${SITE}/og-card-2026-07.png`,
       inLanguage: 'en-US',
+      datePublished: '2026-06-17',
+      dateModified: BUILT,
     }],
   }));
 }
@@ -520,6 +522,8 @@ ${html}
         isPartOf: { '@id': SITE_ID },
         mainEntity: { '@id': PERSON_ID },
         inLanguage: 'en-US',
+        datePublished: '2026-08-20',
+        dateModified: BUILT,
       },
       {
         '@type': 'PodcastEpisode',
@@ -584,6 +588,8 @@ ${items}
       name: 'Fractionalytics writing',
       description: 'Published writing by David Smith on AI readiness, data quality and customer analytics.',
       inLanguage: 'en-US',
+      datePublished: posts[posts.length - 1].date,
+      dateModified: posts[0].date,
       publisher: { '@id': ORG_ID },
       author: { '@id': PERSON_ID },
       blogPost: posts.map((p) => ({
@@ -774,6 +780,8 @@ ${verdictsHtml}
         description: 'A six-question self-assessment of whether a company\'s own systems still agree about the basics.',
         isPartOf: { '@id': SITE_ID },
         inLanguage: 'en-US',
+        datePublished: '2026-08-20',
+        dateModified: BUILT,
         author: { '@id': PERSON_ID },
         publisher: { '@id': ORG_ID },
       },
