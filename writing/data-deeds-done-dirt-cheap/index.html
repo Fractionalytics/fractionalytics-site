@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Deeds Done Dirt Cheap | David Smith</title>
+<meta name="description" content="A comprehensive review of the data practice I built at a venture firm, and everything it touched. By David Smith, fractional CDO, May 2024.">
+<meta name="author" content="David Smith">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Fractionalytics">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/">
+<meta property="og:title" content="Data Deeds Done Dirt Cheap | David Smith">
+<meta property="og:description" content="A comprehensive review of the data practice I built at a venture firm, and everything it touched. By David Smith, fractional CDO, May 2024.">
+<meta property="og:image" content="https://fractionalytics.io/og-card-2026-07.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Fractionalytics: AI strategy, the data beneath it, and the systems to run it">
+<meta property="article:published_time" content="2024-05-01">
+<meta property="article:author" content="David Smith">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data Deeds Done Dirt Cheap | David Smith">
+<meta name="twitter:description" content="A comprehensive review of the data practice I built at a venture firm, and everything it touched. By David Smith, fractional CDO, May 2024.">
+<meta name="twitter:image" content="https://fractionalytics.io/og-card-2026-07.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://fractionalytics.io/#website","url":"https://fractionalytics.io/","name":"Fractionalytics","description":"AI strategy, the data beneath it, and the systems to run it.","inLanguage":"en-US","publisher":{"@id":"https://fractionalytics.io/#organization"},"copyrightHolder":{"@id":"https://fractionalytics.io/#organization"}},{"@type":"ProfessionalService","@id":"https://fractionalytics.io/#organization","name":"Fractionalytics, LLC","alternateName":"Fractionalytics","url":"https://fractionalytics.io/","logo":{"@type":"ImageObject","url":"https://fractionalytics.io/logo-stack.svg","caption":"Fractionalytics"},"image":"https://fractionalytics.io/og-card-2026-07.png","email":"david@fractionalytics.io","slogan":"AI strategy, the data beneath it, and the systems to run it","description":"Fractional Chief Data Officer practice. Data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data.","founder":{"@id":"https://fractionalytics.io/#david-smith"},"employee":{"@id":"https://fractionalytics.io/#david-smith"},"address":{"@type":"PostalAddress","addressLocality":"Coral Gables","addressRegion":"FL","addressCountry":"US"},"areaServed":[{"@type":"Country","name":"United States"},{"@type":"Place","name":"Latin America"},{"@type":"Place","name":"Europe"}],"knowsAbout":["AI readiness","Data strategy","Data foundations","Data remediation","Data quality","Entity resolution","Identity resolution","Fractional Chief Data Officer","Customer analytics","Customer lifetime value","Cohort analysis","Data diligence","Customer data platforms","Modern data stack","dbt","Snowflake","Databricks","BigQuery"],"sameAs":["https://www.linkedin.com/in/dksmith01/"]},{"@type":"Person","@id":"https://fractionalytics.io/#david-smith","name":"David Smith","givenName":"David","familyName":"Smith","jobTitle":"Fractional Chief Data Officer","description":"Fractional Chief Data Officer. Sets AI strategy with leadership teams, builds the data and systems underneath it, and ships the highest-leverage pieces.","url":"https://fractionalytics.io/about/","email":"david@fractionalytics.io","worksFor":{"@id":"https://fractionalytics.io/#organization"},"homeLocation":{"@type":"Place","name":"Coral Gables, Florida"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The Wharton School, University of Pennsylvania"},{"@type":"CollegeOrUniversity","name":"Rice University"}],"knowsLanguage":["en","es"],"knowsAbout":["AI readiness","Data strategy","Data foundations","Data remediation","Data quality","Entity resolution","Identity resolution","Fractional Chief Data Officer","Customer analytics","Customer lifetime value","Cohort analysis","Data diligence","Customer data platforms","Modern data stack","dbt","Snowflake","Databricks","BigQuery"],"sameAs":["https://www.linkedin.com/in/dksmith01/","https://www.youtube.com/watch?v=DdW_h7ugRhg"]},{"@type":"BlogPosting","@id":"https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/#article","headline":"Data Deeds Done Dirt Cheap","alternativeHeadline":"A comprehensive review of the data practice I built at a venture firm, and everything it touched.","description":"A comprehensive review of the data practice I built at a venture firm, and everything it touched.","wordCount":3705,"datePublished":"2024-05-01","dateModified":"2024-05-01","inLanguage":"en-US","url":"https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/","mainEntityOfPage":{"@type":"WebPage","@id":"https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/"},"author":{"@id":"https://fractionalytics.io/#david-smith"},"creator":{"@id":"https://fractionalytics.io/#david-smith"},"publisher":{"@id":"https://fractionalytics.io/#organization"},"isPartOf":{"@id":"https://fractionalytics.io/writing/#blog"},"keywords":"data practice, venture, growth accounting","image":"https://fractionalytics.io/og-card-2026-07.png","sameAs":["https://www.linkedin.com/pulse/data-deeds-done-dirt-cheap-david-smith-dwmsc/"],"articleSection":"data practice"},{"@type":"BreadcrumbList","@id":"https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fractionalytics.io/"},{"@type":"ListItem","position":2,"name":"Writing","item":"https://fractionalytics.io/writing/"},{"@type":"ListItem","position":3,"name":"Data Deeds Done Dirt Cheap","item":"https://fractionalytics.io/writing/data-deeds-done-dirt-cheap/"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="masthead-inner">
+<a href="/" aria-label="Fractionalytics home"><img class="logo" src="/logo-stack.svg" alt="Fractionalytics" width="327" height="102"></a>
+<nav class="sitenav" aria-label="Primary"><ul><li><a href="/">Practice</a></li><li><a href="/diagnostic/">The Ladder Check</a></li><li><a href="/writing/">Writing</a></li><li><a href="/about/">About</a></li></ul></nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a><span aria-hidden="true"> /</span></li><li><a href="/writing/">Writing</a><span aria-hidden="true"> /</span></li><li><span aria-current="page">Data Deeds Done Dirt Cheap</span></li></ol></nav>
+<article class="prose">
+<header>
+<p class="eyebrow">Article</p>
+<h1>Data Deeds Done Dirt Cheap</h1>
+<p class="lede">A comprehensive review of the data practice I built at a venture firm, and everything it touched.</p>
+<p class="article-meta">
+<span>By <a href="/about/" rel="author">David Smith</a></span>
+<span><time datetime="2024-05-01">May 1, 2024</time></span>
+<span>3705 words</span>
+</p>
+<ul class="tags"><li>data practice</li><li>venture</li><li>growth accounting</li></ul>
+</header>
+<nav class="callout" aria-label="On this page"><p class="stamp">On this page</p><ul><li><a href="#looking-back">Looking Back</a></li><li><a href="#starting-out">Starting Out</a></li><li><a href="#testing">Testing</a></li><li><a href="#iterating">Iterating</a></li><li><a href="#expanding">Expanding</a></li><li><a href="#educating">Educating</a></li><li><a href="#building-trust">Building Trust</a></li><li><a href="#enhancing">Enhancing</a></li><li><a href="#scaling">Scaling</a></li><li><a href="#take-aways">Take-Aways</a></li><li><a href="#recommended-reading">Recommended Reading</a></li><li><a href="#acknowledgements">Acknowledgements</a></li></ul></nav>
+<div class="article-body">
+<h2 id="looking-back">Looking Back</h2>
+<p>Yesterday was my last official day working full time at TheVentureCity, a global VC investment platform.</p>
+<p>I spent the last six years founding and leading our data team. Not every VC has a data team, but for us it worked because it provided value to our founders and investors. Indeed, the team will continue to live on under new leadership.</p>
+<p>StockOpine's tweet helped inspire this post:</p>
+<p>This is the first of a series of posts in which I reflect upon what I learned during my time at TheVentureCity. I'm doing this mostly to organize my own thoughts and feelings. At this inflection point in my career, I feel the need to take a minute to get perspective on what I've done before redirecting my energy to the future. As William Faulkner wrote, "The past is never dead. It's not even past." The concepts I write about are alive within me and will continue to inform how I think. Now seems like a good time to articulate my thoughts and consolidate the lessons I've learned. Since others might learn from this too, I thought I'd share.</p>
+<h2 id="starting-out">Starting Out</h2>
+<p>When asked about what our team at TheVentureCity did, I'd usually give a very broad answer: We helped TheVentureCity and our startups use data to their advantage. After all, those were essentially my only instructions when I first joined the company: "data is probably important to investing in and building tech companies," the reasoning went, so I had to figure out what that meant for us. It was the type of "blue sky" project that I love, a complex, ambiguous puzzle to be solved.</p>
+<p>I quickly realized I needed to narrow my scope in those early days because "anything data related" was simply too broad and would pull me in too many directions. While not new to working with data, I was new to VC investing. In those first weeks and months, I did a lot of reading to find out what smart investors were doing out there. I found people experimenting with using data at all steps in the VC funnel, from sourcing new deals, to screening companies and founders, to due diligence, to portfolio value creation.</p>
+<p>In talking to our investment team, it didn't seem like dealflow was a chokepoint–we didn't need more deals to look at. Scraping LinkedIn or Crunchbase looking for announcements of new startups or employee movements seemed like interesting ideas, but I wanted to hear about someone doing it successfully first.</p>
+<p>I narrowed my focus to the lower part of the funnel–investment due diligence and portfolio management–and wondered if I could leverage customer analytics to add value to these activities. Customer analytics leverages the idea that businesses are the sum total of each individual customer's activities. If you can get data on how each customer is behaving over time, you can use customer analytics to see things about the business that are hard to discern with the naked eye. It becomes possible to segment customers based on behavior and lifetime value. I had been exposed to the power of customer analytics in my time on the Insights team at Anda and from organizing Miami Data Science Meetup events (in particular one memorable talk by Evan Oster). I started to investigate how it could apply to VC investing.</p>
+<p>It didn't take me long to find Jonathan Hsu's series of blog posts for Social Capital that spelled out how they looked at "growth accounting," a standardized way of measuring and visualizing growth, retention, and engagement for both active users and revenue. A startup with strong growth accounting metrics grows active users and revenues very quickly and efficiently by retaining most of those users and revenues over time. I carefully dissected everything he wrote in those posts and subsequent ones for Tribe Capital. I've learned I'm good at spotting good ideas, and this was a good idea. In particular, Hsu's analogy linking growth accounting to GAAP accounting resonated with me. Each is a standardized way of looking at companies. The former is appropriate for VC-funded startups, while the latter is appropriate for public companies.</p>
+<p>Hsu's public thought leadership became the basis for our analytical framework at TheVentureCity.</p>
+<h2 id="testing">Testing</h2>
+<p>To put Hsu's growth accounting framework into practice, we needed companies' data. That means lots of very granular, transaction-level data. Initially, it was something of a tough sell.</p>
+<p>"Hey, would you please send us your entire history of transactions with customer ID's and amounts." "That could be millions of records!" "Perfect!" Either, "Yeah, no. That sounds like a lot of work and I don't have time." or "How will I know these will be secure?" or "Can I just send you the aggregated data in Excel from our data room?" or "Okay, sure."</p>
+<p>Despite some early pushback from founders, we did manage to convince our first company to turn over some data during the due diligence phase. Since I didn't have much infrastructure at my disposal, I fretted over what tools to use. Excel? R? Python? Put everything in a database and run SQL? I settled on Python. (You may see and use a later manifestation of that early work in the Data Pipeline Toolkit I wrote and published to GitHub in 2019. It has recently been updated with the latest Python libraries.)</p>
+<p>I ran the first dataset through the analysis and out came the results. They showed that MAU and MRR growth had stalled and there were unexpectedly high rates of MRR churn. Hmm. Using this data as a jumping off point, we had a highly constructive and no-nonsense discussion with the company's leadership team about their challenges and how we could best support them. The analysis and subsequent discussion was an "Aha! moment" for our investing team and me. Customer analytics hadn't answered all of our questions; rather, it helped us ask much better, below-surface-level follow-up questions that honed in on the critical success drivers of the business. The leadership team's responses helped us assess their business acumen by seeing how well they understood those drivers.</p>
+<h2 id="iterating">Iterating</h2>
+<p>This pattern of customer analytics derived from raw transactional or event log data revealing the most important lines of inquiry repeated itself again and again. In VC, it can be hard to quantify results due to multi-yearlong feedback loops. But qualitatively, the team and I felt like we were on the right track with this approach to leveraging customer analytics in the due diligence process. We kept asking founders for their data and found that, if we could illustrate to them why it would be worth their while, they found value in handing it over. Personally, I performed growth accounting analysis on hundreds of companies' data. Later, I trained members of my team to look at hundreds more. In most cases, we were able to show them something meaningful about their business that they had never seen or considered.</p>
+<h2 id="expanding">Expanding</h2>
+<p>Our early-stage investment activity ramped up, and we began shepherding 30+ companies per year through our accelerator program designed to help them achieve product-market fit (PMF) and stimulate product-led growth (PLG). In addition to looking at customer-level data during the due diligence process (when available), we also helped them instrument their products so they could start leveraging customer analytics on their own. Understanding users' and customers' behavior is the best way for a product team to see what users think of the product.</p>
+<p>The opportunity to collaborate with founding teams from all over the world, in a variety of industries, leveraging a variety of business models was one of the intensive learning experiences of my career. It was like working on 3-4 real-life business school case studies at a given time, with more coming all the time. Some patterns started to emerge:</p>
+<ul>
+<li>The companies were too small to hire their own data person</li>
+<li>The founders appreciated and valued what I was able to show them about their business</li>
+<li>Most would benefit from instrumenting with Segment and using Amplitude for analytics</li>
+<li>Companies that had their data in order generally tended to operate more effectively overall, so much so that it became something to look for in due diligence</li>
+</ul>
+<p>These factors led us to expand our efforts around data. First, we tried to move beyond the initial Python scripts by adopting a monolithic analytics platform to make ingesting, storing, transforming, and sharing the data easier at scale. We hired a product data analyst in our Madrid office to handle the European companies, and later a data analytics engineer to help facilitate the flow of data within our organization and from our startups. In many cases we acted as a company's "bridge" data team while they grew big enough to get to the next funding round, when they would be able to afford to hire someone.</p>
+<h2 id="educating">Educating</h2>
+<p>As we expanded the number of companies we needed to reach, we needed to to educate our founders on what was possible to do with the data their companies were generating. As the proverb goes, "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." I published blog posts and delivered presentations around the following topics…</p>
+<ul>
+<li><strong>"Measuring the Health of Your Startup"</strong> – Growth accounting is like an annual checkup at the doctor's office. It's pretty quick and lets you know areas where you might need to see a specialist.</li>
+<li><strong>"From Engagement to Retention to Growth"</strong> – Identifying engaged users is a key first step towards getting them to return repeatedly, which is an important precondition for efficient growth.</li>
+<li><strong>"Product-Market Fit Fundamentals"</strong> – There are three categories of qualitative and quantitative signals that help you determine the strength of signal when assessing PMF.</li>
+<li><strong>"Customer Centricity &amp; Lifetime Value"</strong> – Celebrate heterogeneity among your customer base and treat each group of customers differently.</li>
+<li><strong>"Using RFM for Customer Segmentation &amp; Marketing Strategy"</strong> – Another lens on customer lifetime value, this talks about specific strategies for different behavioral segments.</li>
+<li><strong>"Tell Your Story With Data"</strong> – Apply Freytag's Pyramid to your startup pitch deck and selectively use data to support your hero's journey. It turns out there is a lot of overlap between creating convincing data visualizations and creating convincing startup pitches!</li>
+</ul>
+<p>The feedback that I got from these talks was very positive. Founders seemed to appreciate being empowered to view their business through a customer analytics lens. I considered it advertising for our team. Once a founding team heard one of these talks, they felt a sense of trust and were much more willing to give us their data to analyze. Founders' enthusiasm for the material put wind in the data team's sails.</p>
+<h2 id="building-trust">Building Trust</h2>
+<p>Building trust and credibility has always been important to me in my career, never more so than when leading the data team at TheVentureCity. The educational sessions mentioned above were, as much as anything, about establishing our team as capable, dependable partners, there to help our founders and investment team members however possible. From there, we tried to use every interaction–-whether while setting up a data pipeline or delivering an analysis–-as another opportunity to associate the concept of "credibility" with the concept of "data team."</p>
+<p>On many occasions, we noticed discrepancies between what our data said and what the founders were reporting. The data team took this (almost) personally as a threat to our brand: we never wanted to be out of sync. Some examples included…</p>
+<ul>
+<li>Many times, a startup's definition of "active usage" would change to include a new feature, and we had to update our queries.</li>
+<li>We once had a mismatch between our dashboard and theirs because they were in California and our query was using Coordinated Universal Time (UTC). Once we told BigQuery what timezone to use, problem solved!</li>
+<li>Being global investors, exchange rates frequently got in the way. We always liked to standardize on US Dollars whenever possible.</li>
+</ul>
+<p>On such occasions, we did our best to be very transparent and detailed with how we were transforming, aggregating, or calculating the data. We never wanted any unresolved issues out there gnawing away at our credibility. If a data team is viewed as untrustworthy, then it can't add any value because everyone stops listening.</p>
+<h2 id="enhancing">Enhancing</h2>
+<p>From the data team's customers–our investment team and the startup founders–we began to realize that calculating absolute numbers wasn't enough. Instead of just measuring a month-over-month active user retention rate, for example, we needed to be able to put it into context by comparing it to similar companies.</p>
+<p>At first we struggled with how to do meaningful benchmarking. Sure, we were gathering proprietary data from more and more companies every week and, eventually, we might get enough density in a particular vertical and/or revenue model that we could start to infer from the range of values what is good vs. what is not so good. But until that point, we just didn't have enough examples to draw from. We were always comparing apples to oranges.</p>
+<p>Then, on June 9, 2020, Lenny Rachitsky published issue #29 of his newsletter, entitled "What is good retention?" Instead of looking at raw data from lots of companies, he surveyed industry experts and published where their ranges were. At last, we could at least give most of our founders a data-driven answer to whether their retention was any good. A former AirBnB product manager embarking on what would become a wildly successful second act as a thought leader to product managers everywhere, Lenny had spoken at TheVentureCity's campus in Miami in January 2020, so we knew him to be credible. As time went on, we created a lenny_rachitsky_thresholds lookup table in our data warehouse and began including Rachitsky's good and great thresholds on all of our standard dashboards. It became the basis for normalizing the performance of all of our startups on a standard scale to get apples-to-apples comparisons and better visualize the performance of the portfolio.</p>
+<p>We sought to enhance our thinking in other ways too. We worked with our accelerator startups to use Sean Ellis's PMF survey so they could gather a different type of data that would be helpful in their journey. He asks one main question: "How would you feel if you could no longer use the product?" If 40% answer "very disappointed," that's a strong signal of PMF. A First Round blog post about Superhuman Mail's emphasis on using this technique went viral in the startup community and helps illustrate how to use it.</p>
+<p>I also began tinkering with incorporating customer lifetime value (CLV) and unit economic analysis into our analysis framework, leveraging the work of Wharton's Peter Fader and many others. Since we already had the customer-level historical transactional data from many of our startups, we could fit predictive models for residual customer value (the future amount that each customer is predicted to bring in based on past behavior). Comparing CLV with marketing spend helped larger startups/scaleups visualize and understand the value each cohort of customers brings to the business over time. Such analysis became part of customer base audits we conducted for some of our larger portfolio companies and third-party due diligence opportunities. We called these "deep dives," which went well beyond the surface-deep growth accounting analysis. In one example, I was able to illustrate to a company's board that customer acquisition and product mix were trending in the right direction and that there were pockets of untapped value in the customer base, providing an analytical justification for further investment.</p>
+<p>However, we had to be selective with deep dives into CLV and unit economics analysis because many of our companies weren't mature enough for it. CLV models only work when companies know who their customers are and have reliable ways of acquiring them. If you only have 12 months of operating history, how confident can you really feel in a model that projects 36 months into the future? We had to get creative to find ways to make the underlying concepts of CLV and unit economics useful to younger companies. Instead of using models to make long-term projections about CLV, we had them focus on their payback period: the number of months it takes to make back your marketing spend based on how much customers buy and how many of them stick around for multiple months. Using short payback periods to illustrate capital efficiency can be a good look in a Series A pitch deck.</p>
+<p>Another way CLV-inspired analysis helped was to make simple time series plots in Tableau or Count showing a dot every time a customer purchased.</p>
+<figure class="figure-note">
+<figcaption><span class="stamp">Figure, in the original</span> Each customer's time series is on its own row and the size of the circle represents the relative dollars spent</figcaption>
+</figure>
+<p>It's not exactly cutting-edge data science, but on some occasions, simply visualizing customer activity in this way helped identify purchasing patterns that triggered ideas in a founder's mind. I recommend it.</p>
+<p>As Kirby Ferguson says in his brilliant video, "Everything is a Remix." We continuously learned from some great thought leaders who generously shared their work publicly. When we found something that we thought could help, we tested it with our customers. If the feedback was positive, we incorporated it into our analysis framework.</p>
+<h2 id="scaling">Scaling</h2>
+<p>As the number of companies that we looked at and the number of companies in our portfolio grew, so too did our data infrastructure needs. We wanted automated data pipelines from dozens of startups to power up-to-date growth accounting dashboards. We wanted to share those dashboards between our teams and the startup founders. And we wanted to minimize headcount.</p>
+<p>It became increasingly clear that our monolithic analytics platform wouldn't work. Oops! It was too closed to facilitate sharing and too inflexible to allow for a modular approach. We needed to run each company through variations of a standard analysis, and the platform didn't allow us to follow DRY coding practices–"Don't Repeat Yourself." Instead we needed separate instances of almost the same code, which got very cumbersome and annoying to maintain. (If you want more detail on this, DM me.)</p>
+<p>It was time to think differently. If only I had heard about this Modern Data Stack concept sooner! It turns out, that for our use case–and that of many other companies–assembling easy-to-use components was superior than a monolithic platform.</p>
+<p>We spun up a cloud data warehouse instance (in our case we picked BigQuery); deployed a no-code data ingestion tool like Fivetran (which we later swapped out for Hevo) to collect raw click and transaction streams from our startups; transformed the raw data into something usable in a dashboard with dbt orchestrated with GitHub Actions; and presented insights back to our customers with visualization tools like Redash, Count (one of our portfolio companies), and Tableau (desktop only), or other methods like Slack and Notion integrations–-whatever was necessary to serve a given use case.</p>
+<p>This architecture served us well for several reasons:</p>
+<ul>
+<li>dbt treats data transformation SQL + Jinja + Python code like it's the software that it is. It allows for passing in parameters; reusing code through modular macros; and source code control using Git and GitHub. No longer did we need slightly different versions of the same code to handle multiple companies.</li>
+<li>It more closely resembled an architecture that one of our startups could deploy themselves. Indeed, once we started to reap the benefits of the modern data stack approach, we evangelized it throughout our portfolio and helped many of our founding teams to modernize their own stacks.</li>
+<li>Assembling components meant that we could swap out any one of them if we needed to. Two years into the modern data stack project, Fivetran warned us of a price increase. Instead of renewing, we tested other solutions and ultimately migrated to Hevo. Besides having to make a few minor tweaks in dbt to accommodate some new raw data formats, none of the other components had to change.</li>
+<li>Fivetran and Hevo are both low-code. One of our guiding philosophies is to write as little code as possible; otherwise, you have to maintain and look after it.</li>
+<li>Retool is also a low-code tool, but it has an API that we leveraged to created dashboards through a Python script, dramatically reducing the time it took to instantiate new dashboards. We like products that balance low-code for end-users with allowing the data team to write code to interface with them so we get the extensibility we need.</li>
+<li>Count's canvas UI allowed for us to create beautiful-looking reports and push notifications with minimal effort.</li>
+</ul>
+<h2 id="take-aways">Take-Aways</h2>
+<ul>
+<li>We focused on the due diligence and portfolio management phase of VC investing</li>
+<li>We used customer analytics in the form of growth accounting to assess companies</li>
+<li>Education and transparency were key factors in building trust with our stakeholders</li>
+<li>The startups found value in seeing their business in a new light</li>
+<li>Our investment teams found value in uncovering probing questions to ask founders</li>
+<li>We tested and rejected many approaches before arriving at our eventual data stack</li>
+<li>Taking a modern data stack approach made scaling with a small team much easier</li>
+</ul>
+<h2 id="recommended-reading">Recommended Reading</h2>
+<ul>
+<li>Jonathan Hsu: Diligence at Social Capital (six-part series); A Quantitative Approach to Product Market Fit; Unit Economics and The Pursuit of Scale Invariance</li>
+<li>Lenny Rachitsky's newsletter</li>
+<li>Wharton's Peter Fader has written numerous books about customer centricity and lifetime value</li>
+<li>Sean Ellis coined the term "growth hacker" and established the 40% rule referenced above</li>
+<li>Dr. Andre Retterath publishes "Data-Driven VC" a thought-leadership newsletter</li>
+<li>Taylor Brownlow of Count writes about the challenges all data teams face at More Than Numbers</li>
+</ul>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Andriy Radich, Evan Oster, Francesca de Quesada Covey, Garoe Gonzalez Parra, Jon Ardinast, Juan Pablo Treviño, Juan Ramiro Meyer, Katya Skorobogatova, Laura González-Estéfani, María Dancausa Vicent, Mario Cantelar Jiménez, Mercedes Plaza García, Roberto Carlos Navas, Santiago Canalejo Lasarte, Victor Servin, Yannick Ruby</p>
+<p>\* What's (relatively) dirt cheap in this story was the modern data stack we configured to manage massive amounts of data with a small team. The data deeds were fairly compensated, unlike in the AC/DC song.</p>
+</div>
+<footer class="origin-note">
+<p>This piece was first published as a LinkedIn article on May 1, 2024 and is reproduced here in full. <a href="https://www.linkedin.com/pulse/data-deeds-done-dirt-cheap-david-smith-dwmsc/" rel="noopener">Read it on LinkedIn</a>, where the comments are.</p>
+<ul><li>Next: <a href="/writing/smells-like-team-spirit/">Smells Like Team Spirit</a></li><li><a href="/writing/">All writing</a></li><li><a href="/diagnostic/">The Ladder Check, a six-question self-assessment</a></li></ul>
+</footer>
+</article>
+</main>
+<footer class="sitefooter">
+<div class="wrap">
+<div class="footer-grid">
+<section>
+<h2>Fractionalytics</h2>
+<ul>
+<li><a href="/">The practice</a></li>
+<li><a href="/diagnostic/">The Ladder Check</a></li>
+<li><a href="/writing/">Writing</a></li>
+<li><a href="/about/">About David Smith</a></li>
+</ul>
+</section>
+<section>
+<h2>Start here</h2>
+<ul>
+<li><a href="/writing/how-many-customers-do-you-have/">How Many Customers Do You Have?</a></li>
+<li><a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a></li>
+<li><a href="/writing/the-more-ambitious-you-get-with-ai/">The more ambitious you get with AI</a></li>
+</ul>
+</section>
+<section>
+<h2>Contact</h2>
+<ul>
+<li><a href="mailto:david@fractionalytics.io">david@fractionalytics.io</a></li>
+<li><a href="https://www.linkedin.com/in/dksmith01/" rel="noopener">LinkedIn</a></li>
+<li>Coral Gables, Florida</li>
+</ul>
+</section>
+<section>
+<h2>For agents</h2>
+<ul>
+<li><a href="/llms.txt">llms.txt</a></li>
+<li><a href="/agents.md">agents.md</a></li>
+<li><a href="/sitemap.xml">sitemap.xml</a></li>
+</ul>
+</section>
+</div>
+<p class="colophon">Fractionalytics, LLC &middot; David Smith &middot; Coral Gables, Florida</p>
+</div>
+</footer>
+
+</body>
+</html>

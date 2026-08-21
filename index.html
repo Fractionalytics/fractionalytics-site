@@ -1,175 +1,143 @@
 <!DOCTYPE html>
-<!--
-  fractionalytics.io — one-screen holding page.
-  Decision: decisions/LOG.md (2026-06-17, "fractionalytics.io: keep it, ship a one-screen
-  branded holding page"). Content source: artifacts/holding-page-content.md.
-  Identity: the 2026 Fractionalytics brand — steel blue #1A658F / sky cyan #41B6E6 / warm paper.
-  UPDATED 2026-06-30: swapped the old CSS 1/F box + Six Caps wordmark for the redesigned STACKED
-  logo lockup (logo-stack.svg: inline 1/F mark with the custom cyan slash, centered over the
-  Archivo-Bold wordmark). One statement only: a "Past the pilot" eyebrow over the LOCKED
-  positioning tagline ("AI strategy, the data beneath it, and the systems to run it"),
-  updated 2026-07-08 for the gravitas refresh (content/messaging-gravitas-refresh.md). The
-  og-image.png link-preview card carries the same tagline (content/og-image.html is its source).
-  Brand fonts via Google Fonts CDN (SIL OFL); logo is a self-contained vector. Deploy index.html
-  alongside logo-stack.svg and og-image.png.
--->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fractionalytics: AI strategy, the data beneath it, and the systems to run it</title>
-  <meta name="description" content="Fractionalytics: AI strategy, the data beneath it, and the systems to run it. David Smith, Miami.">
-
-  <!-- Social sharing (Open Graph + Twitter) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fractionalytics.io/">
-  <meta property="og:title" content="Fractionalytics: AI strategy, the data beneath it, and the systems to run it">
-  <meta property="og:description" content="One person who sets the AI strategy with your leaders, builds the data and systems to run it, and ships the highest-leverage pieces. Past the pilot, where the bigger ideas need more and better data than any pilot ever touched. David Smith, Miami.">
-  <meta property="og:image" content="https://fractionalytics.io/og-card-2026-07.png">
-  <meta property="og:image:width" content="2400">
-  <meta property="og:image:height" content="1260">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://fractionalytics.io/og-card-2026-07.png">
-
-  <!-- 1/F mark as favicon -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A658F'/%3E%3Ctext x='50' y='72' font-family='Arial Narrow,sans-serif' font-weight='700' font-size='58' fill='%2341B6E6' text-anchor='middle'%3E1/F%3C/text%3E%3C/svg%3E">
-
-  <!-- Brand faces (Google Fonts, SIL OFL): Oswald = display; Archivo = body; JetBrains Mono = labels -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --brand-blue: #1A658F;
-      --brand-cyan: #41B6E6;
-      --blue-600:   #155578;
-      --blue-700:   #114561;
-      --blue-900:   #0A2838;
-      --paper-0:    #FAF9F7;
-      --paper-100:  #E4E2DD;
-      --paper-600:  #565350;
-      --paper-400:  #97928A;
-      --border:     #D4D1C9;
-
-      --font-display: 'Oswald', 'Arial Narrow', sans-serif;
-      --font-body:    'Archivo', system-ui, -apple-system, sans-serif;
-      --font-mono:    'JetBrains Mono', ui-monospace, monospace;
-
-      --ring: color-mix(in srgb, var(--brand-cyan) 55%, transparent);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html, body { height: 100%; }
-
-    body {
-      background: var(--paper-100);
-      color: var(--blue-900);
-      font-family: var(--font-body);
-      -webkit-font-smoothing: antialiased;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px;
-      min-height: 100svh;
-    }
-
-    main {
-      width: 100%;
-      max-width: 640px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .logo {
-      width: clamp(216px, 46vw, 324px);
-      height: auto;
-      margin-bottom: 32px;
-    }
-
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-weight: 500;
-      font-size: clamp(0.7rem, 1.7vw, 0.78rem);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--brand-blue);
-    }
-
-    .tagline {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: clamp(1.02rem, 2.5vw, 1.3rem);
-      line-height: 1.28;
-      letter-spacing: 0.005em;
-      color: var(--brand-blue);
-      margin-top: 12px;
-      max-width: min(30ch, 100%);
-    }
-
-    .rule {
-      width: 64px;
-      height: 1px;
-      background: var(--border);
-      margin: 38px 0 28px;
-    }
-
-    .contact {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .contact a {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--blue-600);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      padding: 2px 0;
-      transition: color 160ms ease-out, border-color 160ms ease-out;
-    }
-    .contact a:hover { color: var(--brand-cyan); border-color: var(--brand-cyan); }
-    .contact a:focus-visible { outline: 3px solid var(--ring); outline-offset: 4px; border-radius: 2px; }
-    .contact .dot { color: var(--paper-400); font-family: var(--font-mono); }
-
-    .by {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--paper-400);
-      margin-top: 30px;
-    }
-
-    @media (max-width: 480px) {
-      .contact .dot { display: none; }
-      .contact { flex-direction: column; gap: 10px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fractionalytics: AI strategy and the data foundation under it</title>
+<meta name="description" content="Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables.">
+<meta name="author" content="David Smith">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://fractionalytics.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fractionalytics">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fractionalytics.io/">
+<meta property="og:title" content="Fractionalytics: AI strategy and the data foundation under it">
+<meta property="og:description" content="Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables.">
+<meta property="og:image" content="https://fractionalytics.io/og-card-2026-07.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Fractionalytics: AI strategy, the data beneath it, and the systems to run it">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fractionalytics: AI strategy and the data foundation under it">
+<meta name="twitter:description" content="Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables.">
+<meta name="twitter:image" content="https://fractionalytics.io/og-card-2026-07.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://fractionalytics.io/#website","url":"https://fractionalytics.io/","name":"Fractionalytics","description":"AI strategy, the data beneath it, and the systems to run it.","inLanguage":"en-US","publisher":{"@id":"https://fractionalytics.io/#organization"},"copyrightHolder":{"@id":"https://fractionalytics.io/#organization"}},{"@type":"ProfessionalService","@id":"https://fractionalytics.io/#organization","name":"Fractionalytics, LLC","alternateName":"Fractionalytics","url":"https://fractionalytics.io/","logo":{"@type":"ImageObject","url":"https://fractionalytics.io/logo-stack.svg","caption":"Fractionalytics"},"image":"https://fractionalytics.io/og-card-2026-07.png","email":"david@fractionalytics.io","slogan":"AI strategy, the data beneath it, and the systems to run it","description":"Fractional Chief Data Officer practice. Data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data.","founder":{"@id":"https://fractionalytics.io/#david-smith"},"employee":{"@id":"https://fractionalytics.io/#david-smith"},"address":{"@type":"PostalAddress","addressLocality":"Coral Gables","addressRegion":"FL","addressCountry":"US"},"areaServed":[{"@type":"Country","name":"United States"},{"@type":"Place","name":"Latin America"},{"@type":"Place","name":"Europe"}],"knowsAbout":["AI readiness","Data strategy","Data foundations","Data remediation","Data quality","Entity resolution","Identity resolution","Fractional Chief Data Officer","Customer analytics","Customer lifetime value","Cohort analysis","Data diligence","Customer data platforms","Modern data stack","dbt","Snowflake","Databricks","BigQuery"],"sameAs":["https://www.linkedin.com/in/dksmith01/"]},{"@type":"Person","@id":"https://fractionalytics.io/#david-smith","name":"David Smith","givenName":"David","familyName":"Smith","jobTitle":"Fractional Chief Data Officer","description":"Fractional Chief Data Officer. Sets AI strategy with leadership teams, builds the data and systems underneath it, and ships the highest-leverage pieces.","url":"https://fractionalytics.io/about/","email":"david@fractionalytics.io","worksFor":{"@id":"https://fractionalytics.io/#organization"},"homeLocation":{"@type":"Place","name":"Coral Gables, Florida"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The Wharton School, University of Pennsylvania"},{"@type":"CollegeOrUniversity","name":"Rice University"}],"knowsLanguage":["en","es"],"knowsAbout":["AI readiness","Data strategy","Data foundations","Data remediation","Data quality","Entity resolution","Identity resolution","Fractional Chief Data Officer","Customer analytics","Customer lifetime value","Cohort analysis","Data diligence","Customer data platforms","Modern data stack","dbt","Snowflake","Databricks","BigQuery"],"sameAs":["https://www.linkedin.com/in/dksmith01/","https://www.youtube.com/watch?v=DdW_h7ugRhg"]},{"@type":"WebPage","@id":"https://fractionalytics.io/#webpage","url":"https://fractionalytics.io/","name":"Fractionalytics: AI strategy and the data foundation under it","description":"Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables.","isPartOf":{"@id":"https://fractionalytics.io/#website"},"about":{"@id":"https://fractionalytics.io/#organization"},"primaryImageOfPage":"https://fractionalytics.io/og-card-2026-07.png","inLanguage":"en-US"}]}</script>
 </head>
 <body>
-  <main>
-    <img class="logo" src="logo-stack.svg" alt="Fractionalytics" width="327" height="102">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="masthead-inner">
+<a href="/" aria-label="Fractionalytics home"><img class="logo" src="/logo-stack.svg" alt="Fractionalytics" width="327" height="102"></a>
+<nav class="sitenav" aria-label="Primary"><ul><li><a href="/" aria-current="page">Practice</a></li><li><a href="/diagnostic/">The Ladder Check</a></li><li><a href="/writing/">Writing</a></li><li><a href="/about/">About</a></li></ul></nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<article class="prose">
+<p class="eyebrow">Past the pilot</p>
+<h1>AI strategy, the data beneath it, and the systems to run it</h1>
+<p class="lede">Companies that already bought the AI keep hitting the same wall: the systems underneath disagree about the basics. That work has always been needed and rarely fundable, because nobody could say what it would cost or what it would return. Both of those just changed.</p>
+<p>Most companies I meet are not stuck on AI. They are stuck underneath it.</p>
+<p>They ran the pilot, bought the license, or built the agent, and it worked well enough to raise the ambition. Then the next step needed two systems to agree on something basic, and they did not. Nobody inside the building can say how far off the numbers are, or why, because the people who built the mess left and the logic lives in dashboards, spreadsheets and three people's heads.</p>
+<h2 id="what-that-looks-like-in-practice">What that looks like in practice</h2>
+<p><strong>A consumer software company had paid for a marketing platform it could not switch on.</strong> Two upstream systems disagreed about who the customers were by more than 300,000 records. The license was being paid monthly and returning nothing. The tool was never the problem.</p>
+<p><strong>At a payments company, finance and growth calculated profit per transaction differently</strong>, millions apart on a single cost line. A new product showed a profit in one report and a loss in the other, and the leadership team could not fund it or kill it.</p>
+<p><strong>A customer count came back 1,600 in one system and 14,000 in another.</strong> The fix was three workflows, two reports and four filters. The analysis that had been blocked behind it ran the same week.</p>
+<h2 id="remediation-when-something-is-already-broken">Remediation, when something is already broken</h2>
+<p><strong>Part A. Find out what is actually wrong, and stop.</strong> A short, bounded look that ends in a decision rather than a report: what is broken, which of those are costing you something now, and what each would take to fix. If you go on to the build, this comes off the price of it. If you do not, you still own the map.</p>
+<p><strong>Part B. Fix the things worth fixing.</strong> I own detection, matching, triage and measurement. Your team owns the source-system changes and the business calls about what a number should mean, because those are not mine to make. Weeks rather than months, and the measurement is agreed before the work starts so that "done" is not a matter of opinion.</p>
+<p><strong>Part C. Keep it from happening again.</strong> The reason this work has historically been thrown away is that nothing captured what was learned. Every definition settled, every rule agreed and every fix made becomes something the business owns and the next AI project stands on, rather than tribal knowledge that leaves when someone does.</p>
+<h2 id="diligence-before-you-own-it">Diligence, before you own it</h2>
+<p>The three parts above are what happens once the company is yours. Diligence asks a different question, for a different person, at the only moment it can be asked: what are you actually buying?</p>
+<p><strong>A customer base audit.</strong> Cohorts, concentration and payback rebuilt from the event logs or transaction records, with the segments carrying the thesis named. Concentration first, because revenue resting on a few customers is a risk the multiple should price.</p>
+<p><strong>A data condition review.</strong> Which reported numbers come from a system, and which get rebuilt in a spreadsheet every month. Manual processes pass diligence intact and then set the ceiling on the operating plan, because every initiative built on those numbers inherits the manual step.</p>
+<p><strong>An integration cost estimate.</strong> Every add-on is a data integration event and the target's definitions will not match yours. That cost is knowable before you close, and it is usually discovered in month four.</p>
+<p>This is diagnosis, not remediation. If everything is in decent shape, that is the finding and you can stop.</p>
+<h2 id="fractional-cdo-when-it-is-not-one-thing">Fractional CDO, when it is not one thing</h2>
+<p>Sometimes it is not one broken thing. What I hear is a version of the same sentence: we want to be data-driven and AI-forward, and we are having trouble getting there.</p>
+<p>The answer is never one thing either. It is a combination, and which part is binding differs every time.</p>
+<ul>
+<li>Do you have the right people on the bus, and are they in the right seats?</li>
+<li>Does the business trust its data?</li>
+<li>Where are the quick wins?</li>
+<li>Is the tool stack getting in the way?</li>
+<li>What is the company spending on this team, and what is it getting back?</li>
+</ul>
+<p>Trust is usually the long one, and you can hear it in the meetings. Finance does not trust what marketing is saying and marketing does not trust what finance is saying, so all they do is argue about the numbers rather than take action and grow their business.</p>
+<p>The tool stack question runs the whole gamut, from how the data comes in to whether what comes out is trustworthy enough to point AI at. One company had Snowflake with a pile of views built on top and nothing managing any of it. We rebuilt that layer in dbt.</p>
+<p>The last question is the one that rarely gets asked out loud. Some of what a data team returns is intangible, and that is fine, but the ROI equation is still real and it can be improved.</p>
+<p>Data is a business discipline much more than it is a technical one.</p>
+<h2 id="how-you-buy-it">How you buy it</h2>
+<p>Three shapes. Which one fits is a question about the work, not about price.</p>
+<p><strong>A block of hours.</strong> Time and materials. Right for spot work, and for a problem nobody has scoped yet.</p>
+<p><strong>A fixed-scope project.</strong> A statement of work, with the measurement agreed before it starts. Right once Part A has told us what we are actually fixing.</p>
+<p><strong>A fractional CDO basis.</strong> Right when the problem is pervasive enough to need someone embedded with your team over an extended period, rather than a bounded piece handed back at the end. It depends on what we are trying to accomplish.</p>
+<h2 id="where-the-work-happens">Where the work happens</h2>
+<p>The systems that hold customer data: <strong>Salesforce, Segment, Marketo, HubSpot, Harvest.</strong></p>
+<p>The warehouses where that data mixes with everything else: <strong>Snowflake, Databricks, BigQuery.</strong> That second tier matters. Customer data sitting next to the rest of what a company knows is frequently part of the problem rather than the place the problem gets solved.</p>
+<h2 id="why-the-economics-changed">Why the economics changed</h2>
+<p>Data remediation has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that moved. The value went up, because clean data is now the difference between an AI initiative that gets believed and one that quietly stops being used. The cost came down, because the archeology, working out what a system does and why it disagrees with its neighbor, is the part that used to take months of expensive people and is now the part that compresses most.</p>
+<p>That is an argument about economics, not a payback model. Anyone who hands you one of those before looking at your systems is guessing.</p>
+<h2 id="who-i-am">Who I am</h2>
+<p>I set AI strategy with leadership teams, build the data and systems underneath it, and ship the highest-leverage pieces myself. Six years of that ran inside an international venture firm's portfolio, hands-on across fintech, edtech, pharma and more, so I can tell fast whether a problem is structural or just process. That firm had offices and investments in the US, Latin America and Europe.</p>
+<p>I have not been setting AI strategy for decades, but I have been building at the boundary between business, software and data for that long.</p>
+<p>I sell no software and take no vendor commissions, so when the answer is that a tool you are considering will not do what you need, that is the answer you get. It is the same reason I am useful in the room when two departments are both convinced they are right: I have nothing to defend.</p>
+<p><a href="/about/">More about how I got here</a>, including the roles, the systems and the education behind it.</p>
+<h2 id="start-with-the-ladder-check">Start with the Ladder Check</h2>
+<p>The Ladder Check is a short self-assessment on this site that takes about three minutes and ends in a named result rather than a score. One person can answer all six from memory, with no meeting and no data pull, and one of the outcomes is that you are fine and should go spend the money on the AI itself.</p>
+<p><a href="/diagnostic/">Take the Ladder Check</a></p>
+<h2 id="read-the-argument">Read the argument</h2>
+<p>I write about where AI ambition meets the state of a company's data. The current series runs through <a href="/writing/how-many-customers-do-you-have/">how far up the ladder a company can get before its answers stop agreeing</a>, and <a href="/writing/customer-analytics-is-worth-another-look/">what changed in the economics of customer analytics</a>.</p>
+<p><a href="/writing/">All writing</a></p>
+</article>
+</main>
+<footer class="sitefooter">
+<div class="wrap">
+<div class="footer-grid">
+<section>
+<h2>Fractionalytics</h2>
+<ul>
+<li><a href="/">The practice</a></li>
+<li><a href="/diagnostic/">The Ladder Check</a></li>
+<li><a href="/writing/">Writing</a></li>
+<li><a href="/about/">About David Smith</a></li>
+</ul>
+</section>
+<section>
+<h2>Start here</h2>
+<ul>
+<li><a href="/writing/how-many-customers-do-you-have/">How Many Customers Do You Have?</a></li>
+<li><a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a></li>
+<li><a href="/writing/the-more-ambitious-you-get-with-ai/">The more ambitious you get with AI</a></li>
+</ul>
+</section>
+<section>
+<h2>Contact</h2>
+<ul>
+<li><a href="mailto:david@fractionalytics.io">david@fractionalytics.io</a></li>
+<li><a href="https://www.linkedin.com/in/dksmith01/" rel="noopener">LinkedIn</a></li>
+<li>Coral Gables, Florida</li>
+</ul>
+</section>
+<section>
+<h2>For agents</h2>
+<ul>
+<li><a href="/llms.txt">llms.txt</a></li>
+<li><a href="/agents.md">agents.md</a></li>
+<li><a href="/sitemap.xml">sitemap.xml</a></li>
+</ul>
+</section>
+</div>
+<p class="colophon">Fractionalytics, LLC &middot; David Smith &middot; Coral Gables, Florida</p>
+</div>
+</footer>
 
-    <p class="eyebrow">Past the pilot</p>
-    <p class="tagline">AI strategy, the data beneath it, and the systems to run it</p>
-
-    <div class="rule" aria-hidden="true"></div>
-
-    <nav class="contact" aria-label="Contact">
-      <a href="mailto:david@fractionalytics.io">david@fractionalytics.io</a>
-      <span class="dot" aria-hidden="true">·</span>
-      <a href="https://www.linkedin.com/in/dksmith01/" target="_blank" rel="noopener">LinkedIn</a>
-    </nav>
-
-    <p class="by">David Smith</p>
-  </main>
 </body>
 </html>
