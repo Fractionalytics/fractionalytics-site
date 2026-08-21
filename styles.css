@@ -508,7 +508,7 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
 /* Every piece was published on LinkedIn with a cover image and the site showed none of them
    until 2026-08-21. Full content width, above the table of contents, below the title block. */
 .cover {
-  margin: 26px 0 34px;
+  margin: 0 0 30px;   /* sits ABOVE the title block now, below the breadcrumbs */
 }
 .cover img {
   display: block;
@@ -517,4 +517,34 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
   border: 1px solid var(--border);
   border-radius: 2px;
   background: var(--paper-50);
+}
+
+/* ---------- writing list, with thumbnails ---------- */
+/* The list was seven blocks of grey text. Thumbnails give it a shape you can scan.
+   The image is aria-hidden with an empty alt and tabindex -1 on purpose: it is decorative
+   and duplicates the title link right beside it, so a screen reader would otherwise hear
+   every entry twice and a keyboard user would tab through fourteen links to reach seven. */
+.post-list > li.has-thumb {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 22px;
+  align-items: start;
+  max-width: none;
+}
+.post-list .thumb { display: block; }
+.post-list .thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--paper-50);
+}
+.post-list .post-item-text { max-width: var(--measure); min-width: 0; }
+
+@media (max-width: 640px) {
+  .post-list > li.has-thumb { grid-template-columns: 1fr; gap: 14px; }
+  .post-list .thumb img { max-height: 190px; }
 }

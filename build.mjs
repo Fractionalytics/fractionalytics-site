@@ -689,12 +689,20 @@ const READING = [
 
 {
   const trail = [{ href: '/', label: 'Home' }, { href: '/writing/', label: 'Writing' }];
-  const items = posts.map((p) => `<li>
+  // Thumbnails: 480x320 centre-crops of each cover, so seven different aspect ratios line up in
+  // one column. Deliberately NOT the full covers: those are 2.2MB together and this is one page.
+  const items = posts.map((p) => {
+    const thumb = p.cover ? `/writing/img/thumb/${p.cover.replace(/\.[a-z]+$/i, '.jpg')}` : null;
+    return `<li${thumb ? ' class="has-thumb"' : ''}>
+${thumb ? `<a class="thumb" href="${p.href}" tabindex="-1" aria-hidden="true"><img src="${thumb}" alt="" width="480" height="320" loading="lazy" decoding="async"></a>` : ''}
+<div class="post-item-text">
 <p class="stamp"><time datetime="${p.date}">${longDate(p.date)}</time>${p.series ? ` &middot; ${esc(p.series)}` : ''}</p>
 <h2><a href="${p.href}">${esc(p.title)}</a></h2>
 <p>${esc(p.dek)}</p>
 <ul class="tags">${p.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
-</li>`).join('\n');
+</div>
+</li>`;
+  }).join('\n');
 
   const bodyHtml = `<div class="prose">
 <p class="eyebrow">Writing</p>
@@ -802,8 +810,19 @@ posts.forEach((p, idx) => {
     `<li><a href="/diagnostic/">The Ladder Check, a six-question self-assessment</a></li>`,
   ].filter(Boolean).join('');
 
+  // The cover sits ABOVE the title block, below the breadcrumbs (David, 2026-08-21). Nothing
+  // depends on its position: it is a sibling of <header> either way, same .prose width.
+  const coverHtml = p.cover ? (() => {
+    const d = imageSize(p.cover);
+    const dim = d ? ` width="${d.w}" height="${d.h}"` : '';
+    return `<figure class="cover">
+<img src="/writing/img/${p.cover}" alt="${escAttr(p.coverAlt)}"${dim} fetchpriority="high" decoding="async">
+</figure>`;
+  })() : '';
+
   const bodyHtml = `${crumbsHtml(trail)}
 <article class="prose">
+${coverHtml}
 <header>
 ${p.series ? `<p class="eyebrow">${esc(p.series)}</p>` : '<p class="eyebrow">Article</p>'}
 <h1>${esc(p.title)}</h1>
@@ -815,13 +834,6 @@ ${p.series ? `<p class="eyebrow">${esc(p.series)}</p>` : '<p class="eyebrow">Art
 </p>
 <ul class="tags">${p.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
 </header>
-${p.cover ? (() => {
-    const d = imageSize(p.cover);
-    const dim = d ? ` width="${d.w}" height="${d.h}"` : '';
-    return `<figure class="cover">
-<img src="/writing/img/${p.cover}" alt="${escAttr(p.coverAlt)}"${dim} fetchpriority="high" decoding="async">
-</figure>`;
-  })() : ''}
 ${toc}
 <div class="article-body">
 ${p.html}
