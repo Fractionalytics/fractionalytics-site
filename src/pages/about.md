@@ -4,12 +4,11 @@ eyebrow: "About"
 metaTitle: "About David Smith, Fractional CDO at Fractionalytics"
 description: "David Smith, fractional CDO. Data strategy, foundations, remediation and customer analytics, across hundreds of companies in the US, Latin America and Europe."
 headshot: "headshot-david.png"
-lede: "Data strategy, foundations, remediation, and customer analytics for companies moving on AI."
 ---
 
-The platform nobody can switch on and outputs nobody trusts are usually symptoms of the same thing, which is that the business has never settled what its own records mean.
+I have been building at the boundary between business, software and data for decades, and I have worked through hundreds of companies' data and data stacks in that time, many of them during due diligence or portfolio work at a venture fund. Enough of them break in the same ways that I can usually recognize the shape of a problem before the person describing it has finished. That pattern recognition is what helps me both work with clients on big-picture strategy and dive into the data to find the "devil in the details."
 
-I have been building at the boundary between business, software and data for decades, and I have worked through hundreds of companies' data and data stacks in that time, most of them during due diligence or portfolio work at a venture fund. That is where the pattern recognition comes from, and it is what makes the models useful rather than merely fast. Anyone can ask a frontier model what is wrong with a system. Knowing which of its answers will survive contact with the person who built that system is the job. On a recent diagnostic the model did nearly all of the digging, and about a dozen judgment calls of mine decided whether six weeks of its output became a trusted executive readout or a fourth consultant's unread PDF.
+Anyone can point an LLM at a system and ask what's wrong. Knowing which of its answers survive contact with the people who run the business on it is the job.
 
 The rest is people, and it is where this work usually fails. Nobody wants to be told their numbers are wrong, and the answers only hold when the people who own the systems are the ones deciding what a record means. I learn a new business fast because that part is the fun of it, and I would rather build something smarter than something anyone could have built.
 
@@ -38,7 +37,14 @@ Independent data strategy, foundations, remediation and customer analytics for o
 
 **Head of Data and AI, co-founder. Coral Gables, FL. Dec 2025 to present.**
 
-A separate AI consulting partnership, co-founded with a colleague, where I lead delivery end to end: discovery, architecture, deployment and monitoring. Blue Collar AI Labs is its own company and its client work is not Fractionalytics work.
+A separate AI consulting partnership, co-founded with a colleague, where I lead delivery end to end: discovery, architecture, deployment and monitoring. Blue Collar AI Labs is [its own company](https://bluecollarailabs.com/) and its client work is not Fractionalytics work.
+
+The work below is for one client, a private-equity-backed disaster recovery services company.
+
+- **Sales conversation intelligence.** An hourly pipeline moving Salesloft calls and transcripts into Azure SQL with speaker-role attribution and idempotent recovery; an LLM workflow scoring every rep call against the client's own sales methodology into structured coaching insights; and an evaluation framework that measures and improves that scoring.
+- **Account monitoring.** GPT-4o classification over daily news and event ingestion on Azure Functions, scanning the full customer base for acquisition and churn signals. The first three months in production flagged 5.7% of monthly recurring revenue as at-risk due solely to M&A activity. What had been a reactive account-review process became a daily prompted one. Live to customer success managers since May 2026.
+- **Service delivery automation.** An MCP server on Azure Functions wired into Microsoft 365 Copilot, SharePoint and Azure OpenAI, turning a multi-day manual expert process into a structured, human-reviewed pipeline with automated quality scoring. Covers 100-plus tabletop exercises a year.
+- **Salesforce audit.** The company's own systems could not agree on how many customers it had. The model did most of the digging; roughly a dozen judgment calls that determined the answer were mine.
 
 ## TheVentureCity
 

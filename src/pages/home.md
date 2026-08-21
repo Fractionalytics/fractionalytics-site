@@ -3,12 +3,15 @@ title: "AI strategy, the data beneath it, and the systems to run it"
 eyebrow: "Past the pilot"
 metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
+identity: "Fractionalytics is a fractional Chief Data Officer practice: data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data."
 lede: "Companies that already bought the AI keep hitting the same wall: the systems underneath disagree about the basics. That work has always been needed and rarely fundable, because nobody could say what it would cost or what it would return. Both of those just changed."
 ---
 
 Most companies I meet are not stuck on AI. They are stuck underneath it.
 
 They ran the pilot, bought the license, or built the agent, and it worked well enough to raise the ambition. Then the next step needed two systems to agree on something basic, and they did not. Nobody inside the building can say how far off the numbers are, or why, because the people who built the mess left and the logic lives in dashboards, spreadsheets and three people's heads.
+
+The money for all of it is already gone. The license gets paid every month whether or not anyone can switch it on, and the pilot that worked is sitting next to the one that cannot ship. Getting that spend to return something is most of what I get hired to do, and it is a different conversation from asking for more budget.
 
 ## What that looks like in practice
 
@@ -70,27 +73,15 @@ Three shapes. Which one fits is a question about the work, not about price.
 
 Which of the three it is depends on what we are trying to accomplish, and that is a conversation rather than a form.
 
-## Where the work happens
+I sell no software and take no vendor commissions, so when the answer is that a tool you are considering will not do what you need, that is the answer you get. It is the same reason I am useful in the room when two departments are both convinced they are right: I have nothing to defend.
 
-The systems that hold customer data: **Salesforce, Segment, Marketo, HubSpot, Harvest.**
-
-The warehouses where that data mixes with everything else: **Snowflake, Databricks, BigQuery.** That second tier matters. Customer data sitting next to the rest of what a company knows is frequently part of the problem rather than the place the problem gets solved.
+[More about how I got here](/about/), including the roles, the systems and the education behind it.
 
 ## Why the economics changed
 
 Data remediation has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that moved. The value went up, because clean data is now the difference between an AI initiative that gets believed and one that quietly stops being used. The cost came down, because the archeology, working out what a system does and why it disagrees with its neighbor, is the part that used to take months of expensive people and is now the part that compresses most.
 
 That is an argument about economics, not a payback model. Anyone who hands you one of those before looking at your systems is guessing.
-
-## Who I am
-
-I set AI strategy with leadership teams, build the data and systems underneath it, and ship the highest-leverage pieces myself. Six years of that ran inside an international venture firm's portfolio, hands-on across fintech, edtech, pharma and more, so I can tell fast whether a problem is structural or just process. That firm had offices and investments in the US, Latin America and Europe.
-
-I have not been setting AI strategy for decades, but I have been building at the boundary between business, software and data for that long.
-
-I sell no software and take no vendor commissions, so when the answer is that a tool you are considering will not do what you need, that is the answer you get. It is the same reason I am useful in the room when two departments are both convinced they are right: I have nothing to defend.
-
-[More about how I got here](/about/), including the roles, the systems and the education behind it.
 
 ## Start with the Ladder Check
 

@@ -370,7 +370,7 @@ ${jsonld({ '@context': 'https://schema.org', '@graph': graph })}
 <nav class="sitenav" aria-label="Primary"><ul>${nav}</ul></nav>
 </div>
 </header>
-<main id="main" class="wrap">
+<main id="main" class="${o.mainClass || 'wrap'}">
 ${o.body}
 </main>
 <footer class="sitefooter">
@@ -523,18 +523,28 @@ const posts = postFiles.map((f) => {
 {
   const { meta, body } = parseDoc(fs.readFileSync(path.join(ROOT, 'src/pages/home.md'), 'utf8'));
   const { html } = markdown(body);
-  const bodyHtml = `<article class="prose">
-<p class="eyebrow">${esc(meta.eyebrow)}</p>
+  // The home page is the practice's front door, not an article. It deliberately does
+  // NOT use the eyebrow/<article> treatment every post on this site uses: rendered that
+  // way it read as one more blog post and never said what Fractionalytics is (2026-08-21).
+  const bodyHtml = `<section class="hero">
+<div class="wrap hero-inner">
 <h1>${esc(meta.title)}</h1>
+${meta.identity ? `<p class="identity">${esc(meta.identity)}</p>` : ''}
 <p class="lede">${esc(meta.lede)}</p>
+</div>
+</section>
+<div class="wrap homebody">
+<div class="prose">
 ${html}
-</article>`;
+</div>
+</div>`;
 
   write('index.html', layout({
     href: '/',
     metaTitle: meta.metaTitle,
     description: meta.description,
     body: bodyHtml,
+    mainClass: 'homemain',
     trail: [{ href: '/', label: 'Home' }],
     ld: [{
       '@type': 'WebPage',
@@ -569,7 +579,7 @@ ${html}
 </div>
 <img class="headshot" src="/${escAttr(meta.headshot)}" alt="Pen-and-ink stipple portrait of David Smith" width="320" height="320">
 </header>
-<p class="lede">${esc(meta.lede)}</p>
+${meta.lede ? `<p class="lede">${esc(meta.lede)}</p>` : ''}
 ${html}
 </article>`;
 
@@ -614,6 +624,44 @@ ${html}
 
 /* --------------------------------------------------------- writing (index) */
 
+// Single source for the /writing headline: the visible <h1> and the Blog JSON-LD name
+// have to agree or the page scores a contradiction. They had drifted apart (2026-08-21).
+const WRITING_H1 = "Where AI ambition meets the state of a company's data";
+
+// The public execution of BRAND_VOICE.md rule 6, "Credit the canon". These are four of
+// the five register anchors named there; Benn Stancil and Vin Vashishta stay in the brain
+// only, David's call 2026-08-21. Quotes come from the david-brain person entries.
+const READING = [
+  {
+    name: 'Dylan Anderson',
+    outlet: 'The Data Ecosystem',
+    url: 'https://thedataecosystem.substack.com/',
+    note: 'Dylan posts weekly and consistently provides helpful framing for the challenges facing data strategists. And he has good memes.',
+    quote: 'Direction without execution is wishful thinking. Execution without direction is just expensive activity.',
+  },
+  {
+    name: 'Ankita Chatrath',
+    outlet: 'Substack',
+    url: 'https://www.linkedin.com/in/ankitachatrath/',
+    note: 'Ankita writes about what it actually takes to get AI into production, usually in regulated industries. She named the problem I run into most often, which is the same word meaning different things to different teams.',
+    quote: 'The technology is a multiplier. What it multiplies is whatever the organization already is.',
+  },
+  {
+    name: 'Joe Reis',
+    outlet: 'joereis.substack.com',
+    url: 'https://joereis.substack.com/',
+    note: 'Joe co-wrote Fundamentals of Data Engineering. His argument is that AI is electricity, not the dot-com bubble: factories bought electric motors in the 1890s and productivity did not move until the 1920s, because the buildings had to be redesigned around them first. It is the best answer I know to why the pilots work and the next thing does not.',
+    quote: "We're in 1905. The electric motor works, and everyone's bought one.",
+  },
+  {
+    name: 'Ben Rogojan',
+    outlet: "SeattleDataGuy's Newsletter",
+    url: 'https://seattledataguy.substack.com/',
+    note: "Ben is the most practical of the four on what data work actually involves once you are inside a company and the mess is somebody's job.",
+    quote: 'The hard part is rarely clicking the buttons.',
+  },
+];
+
 {
   const trail = [{ href: '/', label: 'Home' }, { href: '/writing/', label: 'Writing' }];
   const items = posts.map((p) => `<li>
@@ -625,18 +673,22 @@ ${html}
 
   const bodyHtml = `<div class="prose">
 <p class="eyebrow">Writing</p>
-<h1>Where AI ambition meets the state of a company's data</h1>
-<p class="lede">Everything below was published first on LinkedIn and is reproduced here in full, so it does not live only on a platform I do not own. Each piece links back to the original, where the comments are.</p>
-
-<h2 id="where-to-start">Where to start</h2>
-<p>If you have one of these in you, make it the current argument. <a href="/writing/how-many-customers-do-you-have/">How Many Customers Do You Have?</a> is the piece the rest of the practice hangs off: the ladder of business questions, and the claim that how far up it you get before the answers stop agreeing is the most useful read on AI readiness I know. <a href="/writing/customer-analytics-is-worth-another-look/">Customer Analytics Is Worth Another Look</a> is its sequel, and it argues the economics rather than the diagnosis.</p>
-<p>If you would rather see the work than the argument, read <a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a>. It is the full account of a six-month reconciliation that took a customer-record mismatch from over 300,000 to under 5,000 and let a company finally switch on the platform it had been paying for.</p>
-<p>The three pieces from May 2024 are a different kind of document: written at the end of six years running data inside a venture fund, they are the record of what that practice covered and what it taught. They are longer, older, and where most of the pattern recognition comes from.</p>
-
-<h2 id="all-pieces">Everything, newest first</h2>
+<h1>${esc(WRITING_H1)}</h1>
+<p class="lede">Below are pieces I posted first to LinkedIn and reproduced here in full. Each one links back to the original, where the comments are. Further down, I highlight some of the people who influence my thinking.</p>
 </div>
 <ol class="post-list">
 ${items}
+</ol>
+<div class="prose">
+<h2 id="recommended-reading">Some of the people I read</h2>
+<p>I credit the people whose work I draw on. These four turn up most often in how I think about this.</p>
+</div>
+<ol class="post-list reading-list">
+${READING.map((r) => `<li>
+<h3><a href="${r.url}" rel="noopener">${esc(r.name)}</a>, <span class="outlet">${esc(r.outlet)}</span></h3>
+<p>${esc(r.note)}</p>
+${r.quote ? `<blockquote><p>${esc(r.quote)}</p></blockquote>` : ''}
+</li>`).join('')}
 </ol>
 <div class="prose">
 <p>There is also <a href="/diagnostic/">The Ladder Check</a>, a six-question self-assessment built out of the first two pieces, if you would rather answer questions about your own company than read about somebody else's.</p>
@@ -652,7 +704,7 @@ ${items}
       '@type': 'Blog',
       '@id': `${SITE}/writing/#blog`,
       url: `${SITE}/writing/`,
-      name: 'Fractionalytics writing',
+      name: WRITING_H1, // must match the visible <h1>, or Machineview flags a contradiction
       description: 'Published writing by David Smith on AI readiness, data quality and customer analytics.',
       inLanguage: 'en-US',
       datePublished: posts[posts.length - 1].date,
@@ -784,10 +836,11 @@ ${read}
 </section>`;
   }).join('\n');
 
+  const DIAGNOSTIC_H1 = 'How far up the ladder do your answers still agree?';
   const bodyHtml = `<article>
 <div class="prose">
 <p class="eyebrow">The Ladder Check</p>
-<h1>How far up the ladder do your answers still agree?</h1>
+<h1>${esc(DIAGNOSTIC_H1)}</h1>
 <p class="lede">Six questions, about three minutes, answerable by one person from memory. No meeting, no data pull, nobody else told. It ends in a named result rather than a score, and one of the results is that you are fine.</p>
 
 <h2 id="how-it-works">What this is</h2>
@@ -843,7 +896,7 @@ ${verdictsHtml}
         '@type': 'WebPage',
         '@id': `${SITE}/diagnostic/#webpage`,
         url: `${SITE}/diagnostic/`,
-        name: 'The Ladder Check: a six-question data self-assessment',
+        name: DIAGNOSTIC_H1, // must match the visible <h1>, not the <title>
         description: 'A six-question self-assessment of whether a company\'s own systems still agree about the basics.',
         isPartOf: { '@id': SITE_ID },
         inLanguage: 'en-US',
