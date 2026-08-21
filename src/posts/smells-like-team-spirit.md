@@ -3,6 +3,8 @@ title: "Smells Like Team Spirit"
 dek: "What I learned founding a data team, and recruiting and leading its people."
 date: 2024-05-02
 origin: https://www.linkedin.com/pulse/smells-like-team-spirit-david-smith-gvljc/
+cover: "cover-team-spirit.jpg"
+coverAlt: "The TheVentureCity data team miming a rock band: trumpet, violin, conductor and headphones, in front of the company backdrop."
 tags: ["data teams","leadership"]
 ---
 In the beginning, it was just me, a solo data dude working with the rest of TheVentureCity team to figure out how to use data to our advantage (please see my previous post for a full discussion of my approach). I was lucky enough to have some strong engineering colleagues (h/t Roberto Carlos Navas and Juan Ramiro Meyer) to help me achieve some early impact, and soon we decided that I could use some help. So we hired some people for me to lead. That's how I ended up founding a data team.

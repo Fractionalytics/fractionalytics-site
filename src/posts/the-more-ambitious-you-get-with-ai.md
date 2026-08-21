@@ -3,6 +3,8 @@ title: "The more ambitious you get with AI, the faster you hit a wall"
 dek: "The early pilots work. That is exactly why the next thing does not."
 date: 2026-07-07
 origin: https://www.linkedin.com/pulse/more-ambitious-you-get-ai-faster-hit-wall-david-smith-thh7e/
+cover: "cover-more-ambitious.jpg"
+coverAlt: "Title card: "Your biggest AI opportunities need a data foundation to match.""
 tags: ["AI adoption","data foundations"]
 ---
 The more ambitious you get with AI, the faster you hit a wall.

@@ -3,6 +3,8 @@ title: "How Many Customers Do You Have?"
 dek: "How far you get before the answers start depending on who you ask is the most useful read on AI readiness I know."
 date: 2026-08-10
 origin: https://www.linkedin.com/pulse/how-many-customers-do-you-have-david-smith-rsgxe/
+cover: "cover-how-many-customers.jpg"
+coverAlt: "Title card: "How many customers do you have?" over the Fractionalytics dark blue."
 tags: ["AI readiness","customer data","data quality"]
 series: "Part 1 of 3"
 ---

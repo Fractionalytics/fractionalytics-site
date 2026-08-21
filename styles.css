@@ -503,3 +503,18 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
   margin-top: 10px;
   max-width: 62ch;
 }
+
+/* ---------- article cover ---------- */
+/* Every piece was published on LinkedIn with a cover image and the site showed none of them
+   until 2026-08-21. Full content width, above the table of contents, below the title block. */
+.cover {
+  margin: 26px 0 34px;
+}
+.cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--paper-50);
+}

@@ -3,6 +3,8 @@ title: "Look at the Stars, Look How They Shine for You"
 dek: "What customer analytics actually is, and why companies should care about it."
 date: 2024-05-15
 origin: https://www.linkedin.com/pulse/look-stars-how-shine-you-david-smith-u7cje/
+cover: "cover-look-at-the-stars.jpg"
+coverAlt: "A rising line chart painted in the style of Van Gogh's Starry Night, with yellow bars and swirling blue sky."
 tags: ["customer analytics"]
 ---
 ## Wading In

@@ -368,14 +368,14 @@ function layout(o) {
 <meta property="og:url" content="${escAttr(url)}">
 <meta property="og:title" content="${escAttr(o.metaTitle)}">
 <meta property="og:description" content="${escAttr(o.description)}">
-<meta property="og:image" content="${SITE}/og-card-2026-07.png">
+<meta property="og:image" content="${o.ogImage || `${SITE}/og-card-2026-07.png`}">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta property="og:image:alt" content="Fractionalytics: AI strategy, the data beneath it, and the systems to run it">
 ${o.publishedTime ? `<meta property="article:published_time" content="${o.publishedTime}">\n<meta property="article:author" content="${AUTHOR}">\n` : ''}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${escAttr(o.metaTitle)}">
 <meta name="twitter:description" content="${escAttr(o.description)}">
-<meta name="twitter:image" content="${SITE}/og-card-2026-07.png">
+<meta name="twitter:image" content="${o.ogImage || `${SITE}/og-card-2026-07.png`}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -535,6 +535,8 @@ const posts = postFiles.map((f) => {
     origin: meta.origin,
     tags: Array.isArray(meta.tags) ? meta.tags : [],
     series: meta.series || null,
+    cover: meta.cover || null,
+    coverAlt: meta.coverAlt || '',
     html: rendered.html,
     headings: rendered.headings,
     words,
@@ -747,6 +749,36 @@ ${r.quote ? `<blockquote><p>${esc(r.quote)}</p></blockquote>` : ''}
   }));
 }
 
+
+/**
+ * Intrinsic pixel size of a PNG or JPEG, read from the file header.
+ *
+ * The first version of the cover markup hardcoded width="1600" height="900" because the flagship
+ * cards are 16:9. Five of the seven covers are not: the Van Gogh is 1400x937, the three-panel is
+ * 1200x644, the team photo is 1439x794. Wrong intrinsic dimensions are worse than none, because
+ * the browser reserves the wrong box and the page jumps when the image lands.
+ */
+function imageSize(file) {
+  try {
+    const b = fs.readFileSync(path.join(ROOT, 'writing/img', file));
+    if (b[0] === 0x89 && b[1] === 0x50) {           // PNG: IHDR is fixed-offset
+      return { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
+    }
+    if (b[0] === 0xff && b[1] === 0xd8) {           // JPEG: walk the segments to a SOF marker
+      let i = 2;
+      while (i < b.length - 9) {
+        if (b[i] !== 0xff) { i++; continue; }
+        const m = b[i + 1];
+        if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) {
+          return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) };
+        }
+        i += 2 + b.readUInt16BE(i + 2);
+      }
+    }
+  } catch { /* fall through */ }
+  return null;
+}
+
 /* ---------------------------------------------------------- writing (posts) */
 
 posts.forEach((p, idx) => {
@@ -783,6 +815,13 @@ ${p.series ? `<p class="eyebrow">${esc(p.series)}</p>` : '<p class="eyebrow">Art
 </p>
 <ul class="tags">${p.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
 </header>
+${p.cover ? (() => {
+    const d = imageSize(p.cover);
+    const dim = d ? ` width="${d.w}" height="${d.h}"` : '';
+    return `<figure class="cover">
+<img src="/writing/img/${p.cover}" alt="${escAttr(p.coverAlt)}"${dim} fetchpriority="high" decoding="async">
+</figure>`;
+  })() : ''}
 ${toc}
 <div class="article-body">
 ${p.html}
@@ -798,6 +837,7 @@ ${p.html}
     metaTitle: `${p.title} | David Smith`,
     description: metaDesc(p),
     ogType: 'article',
+    ogImage: p.cover ? `${SITE}/writing/img/${p.cover}` : null,
     publishedTime: p.date,
     body: bodyHtml,
     trail,

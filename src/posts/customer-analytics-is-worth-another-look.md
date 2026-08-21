@@ -3,6 +3,8 @@ title: "Customer Analytics Is Worth Another Look"
 dek: "The case for customer analytics depends on whether the answers justified the cost of finding them. In two years, both sides of that calculation have changed."
 date: 2026-08-17
 origin: https://www.linkedin.com/pulse/customer-analytics-worth-another-look-david-smith-yucbe/
+cover: "cover-customer-analytics.jpg"
+coverAlt: "Title card for the second piece in the series, on the Fractionalytics dark blue."
 tags: ["customer analytics","AI economics"]
 series: "Part 2 of 3"
 ---

@@ -3,6 +3,8 @@ title: "Data Deeds Done Dirt Cheap"
 dek: "A comprehensive review of the data practice I built at a venture firm, and everything it touched."
 date: 2024-05-01
 origin: https://www.linkedin.com/pulse/data-deeds-done-dirt-cheap-david-smith-dwmsc/
+cover: "cover-data-deeds.jpg"
+coverAlt: "Cover illustration for Data Deeds Done Dirt Cheap."
 tags: ["data practice","venture","growth accounting"]
 ---
 ## Looking Back

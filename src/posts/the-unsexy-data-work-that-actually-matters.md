@@ -3,6 +3,8 @@ title: "The Unsexy Data Work That Actually Matters"
 dek: "How we fixed 300K+ mismatches to unlock marketing automation. Cross-functional data cleanup requires leadership and teamwork."
 date: 2025-10-21
 origin: https://www.linkedin.com/pulse/unsexy-data-work-actually-matters-how-we-fixed-300k-mismatches-smith-gt1we/
+cover: "cover-unsexy.png"
+coverAlt: "Three Venn diagrams in a row, the orange mismatch area shrinking from left to right, under the heading "Cross-Functional Data Cleanup". Beneath, an arrow running from "300K+ mismatches" to "5K mismatches"."
 tags: ["case study","data quality","CDP"]
 ---
 
