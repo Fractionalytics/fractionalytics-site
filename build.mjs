@@ -370,7 +370,7 @@ ${jsonld({ '@context': 'https://schema.org', '@graph': graph })}
 <nav class="sitenav" aria-label="Primary"><ul>${nav}</ul></nav>
 </div>
 </header>
-<main id="main" class="wrap">
+<main id="main" class="${o.mainClass || 'wrap'}">
 ${o.body}
 </main>
 <footer class="sitefooter">
@@ -526,11 +526,17 @@ const posts = postFiles.map((f) => {
   // The home page is the practice's front door, not an article. It deliberately does
   // NOT use the eyebrow/<article> treatment every post on this site uses: rendered that
   // way it read as one more blog post and never said what Fractionalytics is (2026-08-21).
-  const bodyHtml = `<div class="prose pagehead">
+  const bodyHtml = `<section class="hero">
+<div class="wrap hero-inner">
 <h1>${esc(meta.title)}</h1>
 ${meta.identity ? `<p class="identity">${esc(meta.identity)}</p>` : ''}
 <p class="lede">${esc(meta.lede)}</p>
+</div>
+</section>
+<div class="wrap homebody">
+<div class="prose">
 ${html}
+</div>
 </div>`;
 
   write('index.html', layout({
@@ -538,6 +544,7 @@ ${html}
     metaTitle: meta.metaTitle,
     description: meta.description,
     body: bodyHtml,
+    mainClass: 'homemain',
     trail: [{ href: '/', label: 'Home' }],
     ld: [{
       '@type': 'WebPage',
@@ -667,17 +674,12 @@ const READING = [
   const bodyHtml = `<div class="prose">
 <p class="eyebrow">Writing</p>
 <h1>${esc(WRITING_H1)}</h1>
-<p class="lede">Below are pieces I posted first to LinkedIn and reproduced here in full. Each one links back to the original, where the comments are. And I&rsquo;m highlighting some of the people who influence my thinking.</p>
+<p class="lede">Below are pieces I posted first to LinkedIn and reproduced here in full. Each one links back to the original, where the comments are. Further down, I highlight some of the people who influence my thinking.</p>
 </div>
 <ol class="post-list">
 ${items}
 </ol>
 <div class="prose">
-<h2 id="where-to-start">Where to start</h2>
-<p>If you have one of these in you, make it the current argument. <a href="/writing/how-many-customers-do-you-have/">How Many Customers Do You Have?</a> is the piece the rest of the practice hangs off: the ladder of business questions, and the claim that how far up it you get before the answers stop agreeing is the most useful read on AI readiness I know. <a href="/writing/customer-analytics-is-worth-another-look/">Customer Analytics Is Worth Another Look</a> is its sequel, and it argues the economics rather than the diagnosis.</p>
-<p>If you would rather see the work than the argument, read <a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a>. It is the full account of a six-month reconciliation that took a customer-record mismatch from over 300,000 to under 5,000 and let a company finally switch on the platform it had been paying for.</p>
-<p>The three pieces from May 2024 are a different kind of document: written at the end of six years running data inside a venture fund, they are the record of what that practice covered and what it taught. They are longer, older, and where most of the pattern recognition comes from.</p>
-
 <h2 id="recommended-reading">Some of the people I read</h2>
 <p>I credit the people whose work I draw on. These four turn up most often in how I think about this.</p>
 </div>
