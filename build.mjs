@@ -652,6 +652,7 @@ ${html}
 // Single source for the /writing headline: the visible <h1> and the Blog JSON-LD name
 // have to agree or the page scores a contradiction. They had drifted apart (2026-08-21).
 const WRITING_H1 = "Where AI ambition meets the state of a company's data";
+const WRITING_META_TITLE = 'Writing by David Smith on AI readiness and data foundations';
 
 // The public execution of BRAND_VOICE.md rule 6, "Credit the canon". These are four of
 // the five register anchors named there; Benn Stancil and Vin Vashishta stay in the brain
@@ -694,7 +695,7 @@ const READING = [
   const items = posts.map((p) => {
     const thumb = p.cover ? `/writing/img/thumb/${p.cover.replace(/\.[a-z]+$/i, '.jpg')}` : null;
     return `<li${thumb ? ' class="has-thumb"' : ''}>
-${thumb ? `<a class="thumb" href="${p.href}" tabindex="-1" aria-hidden="true"><img src="${thumb}" alt="" width="480" height="320" loading="lazy" decoding="async"></a>` : ''}
+${thumb ? `<a class="thumb" href="${p.href}" tabindex="-1" aria-hidden="true"><img src="${thumb}" alt="${escAttr(p.coverAlt)}" width="480" height="320" loading="lazy" decoding="async"></a>` : ''}
 <div class="post-item-text">
 <p class="stamp"><time datetime="${p.date}">${longDate(p.date)}</time>${p.series ? ` &middot; ${esc(p.series)}` : ''}</p>
 <h2><a href="${p.href}">${esc(p.title)}</a></h2>
@@ -729,7 +730,7 @@ ${r.quote ? `<blockquote><p>${esc(r.quote)}</p></blockquote>` : ''}
 
   write('writing/index.html', layout({
     href: '/writing/',
-    metaTitle: 'Writing by David Smith on AI readiness and data foundations',
+    metaTitle: WRITING_META_TITLE,
     description: 'Full text of David Smith\'s published writing on AI readiness, data quality, identity resolution and customer analytics, from 2024 to today.',
     body: bodyHtml,
     trail,
@@ -737,7 +738,11 @@ ${r.quote ? `<blockquote><p>${esc(r.quote)}</p></blockquote>` : ''}
       '@type': 'Blog',
       '@id': `${SITE}/writing/#blog`,
       url: `${SITE}/writing/`,
-      name: WRITING_H1, // must match the visible <h1>, or Machineview flags a contradiction
+      // Must equal the <title> TAG, not the <h1>. Two earlier attempts set this to the h1 on the
+      // theory that "visible title" meant the heading; both left the contradiction flag standing.
+      // /about is the control: its ProfilePage name is character-for-character its <title> and it
+      // is the only page scoring 18/18 semantics (2026-08-21).
+      name: WRITING_META_TITLE,
       description: 'Published writing by David Smith on AI readiness, data quality and customer analytics.',
       inLanguage: 'en-US',
       datePublished: posts[posts.length - 1].date,
@@ -912,6 +917,7 @@ ${read}
   }).join('\n');
 
   const DIAGNOSTIC_H1 = 'How far up the ladder do your answers still agree?';
+  const DIAGNOSTIC_META_TITLE = 'The Ladder Check: a six-question data self-assessment';
   const bodyHtml = `<article>
 <div class="prose">
 <p class="eyebrow">The Ladder Check</p>
@@ -971,7 +977,7 @@ ${verdictsHtml}
         '@type': 'WebPage',
         '@id': `${SITE}/diagnostic/#webpage`,
         url: `${SITE}/diagnostic/`,
-        name: DIAGNOSTIC_H1, // must match the visible <h1>, not the <title>
+        name: DIAGNOSTIC_META_TITLE, // must equal the <title> tag; see the note on /writing
         description: 'A six-question self-assessment of whether a company\'s own systems still agree about the basics.',
         isPartOf: { '@id': SITE_ID },
         inLanguage: 'en-US',
