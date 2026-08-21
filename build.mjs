@@ -16,6 +16,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { QUESTIONS, VERDICTS, AUTHORITY_NOTE, verdictFor } from './src/diagnostic.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -342,6 +343,30 @@ function crumbsHtml(trail) {
   return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${items}</ol></nav>`;
 }
 
+/**
+ * Cache-busting fingerprint for the stylesheet.
+ *
+ * GitHub Pages serves /styles.css with Cache-Control: max-age=600 and NO version in the URL, so a
+ * deploy that changes both the html and the css can leave a browser holding new markup and the
+ * previous stylesheet. Not a cosmetic risk: on 2026-08-21 David saw the published site with every
+ * cover and thumbnail at intrinsic size, overflowing the page, because his browser still had the
+ * pre-image css in which none of the rules constraining them existed. The site was correct and a
+ * fresh load proved it, which is the worst shape of this bug: invisible to whoever deployed it and
+ * completely broken for whoever visits.
+ *
+ * The URL now carries a hash of the file contents, so any css change is a new URL that cannot be
+ * served from a stale cache.
+ */
+function assetUrl(file) {
+  try {
+    const h = createHash('sha1').update(fs.readFileSync(path.join(ROOT, file))).digest('hex').slice(0, 8);
+    return `/${file}?v=${h}`;
+  } catch {
+    return `/${file}`;
+  }
+}
+const STYLES_URL = assetUrl('styles.css');
+
 function layout(o) {
   const url = `${SITE}${o.href}`;
   const nav = NAV.map((n) => {
@@ -380,7 +405,7 @@ ${o.publishedTime ? `<meta property="article:published_time" content="${o.publis
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="${STYLES_URL}">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
 ${jsonld({ '@context': 'https://schema.org', '@graph': graph })}
