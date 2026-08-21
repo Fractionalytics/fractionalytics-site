@@ -6,7 +6,7 @@ description: "David Smith, fractional CDO. Data strategy, foundations, remediati
 headshot: "headshot-david.png"
 ---
 
-I have been building at the boundary between business, software and data for decades, and I have worked through hundreds of companies' data and data stacks in that time, many of them during due diligence or portfolio work at a venture fund. Enough of them break in the same ways that I can usually recognize the shape of a problem before the person describing it has finished. That pattern recognition is what helps me both work with clients on big-picture strategy and dive into the data to find the "devil in the details."
+I have been building at the boundary between business, software and data for decades, and I have worked through hundreds of companies' data and data stacks in that time, many of them during due diligence or portfolio work at a venture fund. Enough of them break in the same ways that I can usually recognize the shape of a problem before the person describing it has finished. That pattern recognition is what helps me both work with clients on big-picture strategy and dive into the data to find the "devil in the details." Anyone can point an LLM at a system and ask what's wrong. Knowing which of its answers survive contact with the people who run the business on it requires experience and know-how.
 
 The rest is people, and it is where this work usually fails. Nobody wants to be told their numbers are wrong, and the answers only hold when the people who own the systems are the ones deciding what a record means. I learn a new business fast because that part is the fun of it, and I would rather build something smarter than something anyone could have built.
 
