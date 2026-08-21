@@ -435,9 +435,12 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
    rhythm below it, so the front door does not look like a post. */
 .homemain { padding: 0 0 24px; }
 
+/* NOT --paper-50: that is the masthead's colour, and the two bands blended into
+   one shape (David, 2026-08-21). The hero is a step darker than the header above
+   it and two steps darker than the body below. */
 .hero {
-  background: var(--paper-50);
-  border-bottom: 1px solid var(--border);
+  background: var(--paper-100);
+  border-bottom: 1px solid var(--paper-400);
 }
 .hero-inner {
   padding-top: 92px;

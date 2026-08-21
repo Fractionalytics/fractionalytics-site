@@ -579,7 +579,7 @@ ${html}
 </div>
 <img class="headshot" src="/${escAttr(meta.headshot)}" alt="Pen-and-ink stipple portrait of David Smith" width="320" height="320">
 </header>
-<p class="lede">${esc(meta.lede)}</p>
+${meta.lede ? `<p class="lede">${esc(meta.lede)}</p>` : ''}
 ${html}
 </article>`;
 
@@ -650,8 +650,8 @@ const READING = [
     name: 'Joe Reis',
     outlet: 'joereis.substack.com',
     url: 'https://joereis.substack.com/',
-    note: 'Joe co-wrote Fundamentals of Data Engineering. His argument for why AI spending underdelivers is the one I reach for most: access to a new utility changes nothing on its own, and the value shows up only when somebody builds the things that run on top of it.',
-    quote: null,
+    note: 'Joe co-wrote Fundamentals of Data Engineering. His argument is that AI is electricity, not the dot-com bubble: factories bought electric motors in the 1890s and productivity did not move until the 1920s, because the buildings had to be redesigned around them first. It is the best answer I know to why the pilots work and the next thing does not.',
+    quote: "We're in 1905. The electric motor works, and everyone's bought one.",
   },
   {
     name: 'Ben Rogojan',
