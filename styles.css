@@ -409,3 +409,22 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
   .wrap { padding: 0 20px; }
   .masthead .logo { width: 156px; }
 }
+
+/* ---------- recommended reading ---------- */
+/* Reuses .post-list geometry so the two halves of /writing sit on one grid.
+   The outlet is the publication, set apart from the person's name. */
+.reading-list h3 {
+  font-family: var(--font-display, inherit);
+  font-size: 1.14rem;
+  margin: 0 0 8px;
+}
+.reading-list .outlet {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--paper-600);
+  text-transform: none;
+}
+.reading-list blockquote {
+  margin-top: 12px;
+}

@@ -621,6 +621,40 @@ ${html}
 // have to agree or the page scores a contradiction. They had drifted apart (2026-08-21).
 const WRITING_H1 = "Where AI ambition meets the state of a company's data";
 
+// The public execution of BRAND_VOICE.md rule 6, "Credit the canon". These are four of
+// the five register anchors named there; Benn Stancil and Vin Vashishta stay in the brain
+// only, David's call 2026-08-21. Quotes come from the david-brain person entries.
+const READING = [
+  {
+    name: 'Dylan Anderson',
+    outlet: 'The Data Ecosystem',
+    url: 'https://thedataecosystem.substack.com/',
+    note: 'Dylan posts weekly and consistently provides helpful framing for the challenges facing data strategists. And he has good memes.',
+    quote: 'Direction without execution is wishful thinking. Execution without direction is just expensive activity.',
+  },
+  {
+    name: 'Ankita Chatrath',
+    outlet: 'Substack',
+    url: 'https://www.linkedin.com/in/ankitachatrath/',
+    note: 'Ankita writes about what it actually takes to get AI into production, usually in regulated industries. She named the problem I run into most often, which is the same word meaning different things to different teams.',
+    quote: 'The technology is a multiplier. What it multiplies is whatever the organization already is.',
+  },
+  {
+    name: 'Joe Reis',
+    outlet: 'joereis.substack.com',
+    url: 'https://joereis.substack.com/',
+    note: 'Joe co-wrote Fundamentals of Data Engineering. His argument for why AI spending underdelivers is the one I reach for most: access to a new utility changes nothing on its own, and the value shows up only when somebody builds the things that run on top of it.',
+    quote: null,
+  },
+  {
+    name: 'Ben Rogojan',
+    outlet: "SeattleDataGuy's Newsletter",
+    url: 'https://seattledataguy.substack.com/',
+    note: "Ben is the most practical of the four on what data work actually involves once you are inside a company and the mess is somebody's job.",
+    quote: 'The hard part is rarely clicking the buttons.',
+  },
+];
+
 {
   const trail = [{ href: '/', label: 'Home' }, { href: '/writing/', label: 'Writing' }];
   const items = posts.map((p) => `<li>
@@ -633,7 +667,7 @@ const WRITING_H1 = "Where AI ambition meets the state of a company's data";
   const bodyHtml = `<div class="prose">
 <p class="eyebrow">Writing</p>
 <h1>${esc(WRITING_H1)}</h1>
-<p class="lede">Everything below was published first on LinkedIn and is reproduced here in full, so it does not live only on a platform I do not own. Each piece links back to the original, where the comments are.</p>
+<p class="lede">Below are pieces I posted first to LinkedIn and reproduced here in full. Each one links back to the original, where the comments are. And I&rsquo;m highlighting some of the people who influence my thinking.</p>
 </div>
 <ol class="post-list">
 ${items}
@@ -644,6 +678,17 @@ ${items}
 <p>If you would rather see the work than the argument, read <a href="/writing/the-unsexy-data-work-that-actually-matters/">The Unsexy Data Work That Actually Matters</a>. It is the full account of a six-month reconciliation that took a customer-record mismatch from over 300,000 to under 5,000 and let a company finally switch on the platform it had been paying for.</p>
 <p>The three pieces from May 2024 are a different kind of document: written at the end of six years running data inside a venture fund, they are the record of what that practice covered and what it taught. They are longer, older, and where most of the pattern recognition comes from.</p>
 
+<h2 id="recommended-reading">Some of the people I read</h2>
+<p>I credit the people whose work I draw on. These four turn up most often in how I think about this.</p>
+</div>
+<ol class="post-list reading-list">
+${READING.map((r) => `<li>
+<h3><a href="${r.url}" rel="noopener">${esc(r.name)}</a>, <span class="outlet">${esc(r.outlet)}</span></h3>
+<p>${esc(r.note)}</p>
+${r.quote ? `<blockquote><p>${esc(r.quote)}</p></blockquote>` : ''}
+</li>`).join('')}
+</ol>
+<div class="prose">
 <p>There is also <a href="/diagnostic/">The Ladder Check</a>, a six-question self-assessment built out of the first two pieces, if you would rather answer questions about your own company than read about somebody else's.</p>
 </div>`;
 

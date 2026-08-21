@@ -3,12 +3,15 @@ title: "AI strategy, the data beneath it, and the systems to run it"
 eyebrow: "Past the pilot"
 metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
+identity: "Fractionalytics is a fractional Chief Data Officer practice: data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data."
 lede: "Companies that already bought the AI keep hitting the same wall: the systems underneath disagree about the basics. That work has always been needed and rarely fundable, because nobody could say what it would cost or what it would return. Both of those just changed."
 ---
 
 Most companies I meet are not stuck on AI. They are stuck underneath it.
 
 They ran the pilot, bought the license, or built the agent, and it worked well enough to raise the ambition. Then the next step needed two systems to agree on something basic, and they did not. Nobody inside the building can say how far off the numbers are, or why, because the people who built the mess left and the logic lives in dashboards, spreadsheets and three people's heads.
+
+The money for all of it is already gone. The license gets paid every month whether or not anyone can switch it on, and the pilot that worked is sitting next to the one that cannot ship. Getting that spend to return something is most of what I get hired to do, and it is a different conversation from asking for more budget.
 
 ## What that looks like in practice
 
