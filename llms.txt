@@ -16,6 +16,7 @@ David sells no software and takes no vendor commissions.
 
 Full text of every published piece, reproduced from LinkedIn.
 
+- [The Data Project You Killed Would Pass Today](https://fractionalytics.io/writing/the-data-project-you-killed-would-pass-today/): You're funding one use case with a number attached. The data foundation arrives as a byproduct. (August 25, 2026, 2481 words)
 - [Customer Analytics Is Worth Another Look](https://fractionalytics.io/writing/customer-analytics-is-worth-another-look/): The case for customer analytics depends on whether the answers justified the cost of finding them. In two years, both sides of that calculation have changed. (August 17, 2026, 1484 words)
 - [How Many Customers Do You Have?](https://fractionalytics.io/writing/how-many-customers-do-you-have/): How far you get before the answers start depending on who you ask is the most useful read on AI readiness I know. (August 10, 2026, 1933 words)
 - [The more ambitious you get with AI, the faster you hit a wall](https://fractionalytics.io/writing/the-more-ambitious-you-get-with-ai/): The early pilots work. That is exactly why the next thing does not. (July 7, 2026, 658 words)

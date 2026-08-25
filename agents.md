@@ -18,7 +18,8 @@ fractional CDO basis when the problem needs someone embedded over an extended pe
 |---|---|
 | `/` | The practice: the problem, three anonymized cases, then three engagements (remediation, diligence, fractional CDO), the three buying shapes, which systems, the economics |
 | `/diagnostic/` | The Ladder Check: a six-question self-assessment with four possible results, all four written out in full |
-| `/writing/` | Index of 7 published articles |
+| `/writing/` | Index of 8 published articles |
+| `/writing/the-data-project-you-killed-would-pass-today/` | The Data Project You Killed Would Pass Today (August 25, 2026, ~2481 words) |
 | `/writing/customer-analytics-is-worth-another-look/` | Customer Analytics Is Worth Another Look (August 17, 2026, ~1484 words) |
 | `/writing/how-many-customers-do-you-have/` | How Many Customers Do You Have? (August 10, 2026, ~1933 words) |
 | `/writing/the-more-ambitious-you-get-with-ai/` | The more ambitious you get with AI, the faster you hit a wall (July 7, 2026, ~658 words) |
