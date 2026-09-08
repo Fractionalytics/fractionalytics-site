@@ -23,7 +23,7 @@ The money for all of it is already gone. The license gets paid every month wheth
 
 ## Remediation, when something is already broken
 
-**Part A. Find out what is actually wrong, and stop.** A short, bounded look that ends in a decision rather than a report: what is broken, which of those are costing you something now, and what each would take to fix. If you go on to the build, this comes off the price of it. If you do not, you still own the map.
+**Part A. Find out what is actually wrong, and stop.** A short, bounded look that ends in a decision rather than a report: what is broken, which of those are costing you something now, and what each would take to fix. It is priced on its own, because you need the answer either way. If it turns out there is nothing much here, that is a good outcome and you are done.
 
 **Part B. Fix the things worth fixing.** I own detection, matching, triage and measurement. Your team owns the source-system changes and the business calls about what a number should mean, because those are not mine to make. Weeks rather than months, and the measurement is agreed before the work starts so that "done" is not a matter of opinion.
 
