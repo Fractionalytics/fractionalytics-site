@@ -6,11 +6,24 @@ metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
 identity: "Fractionalytics is a fractional Chief Data Officer practice: data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data."
 lede: "Companies that already bought the AI keep hitting the same wall: the systems underneath disagree about the basics. That work has always been needed and rarely fundable, because nobody could say what it would cost or what it would return. Both of those just changed."
+# The three hooks are ONE REGISTER: the buyer's own voice, first person plural. The site's
+# prose voice is first person SINGULAR ("Most companies I meet", "what I get hired to do"),
+# so a "we" here can only be read as the buyer, never as the practice. Card 2 is David's
+# verbatim sentence from the section below and anchors the other two.
+#
+# They therefore DIVERGE FROM THE BODY COPY ON PURPOSE and a consistency pass must not
+# align them back: the Diligence section asks "what are you actually buying?", David
+# addressing the reader, while the card has the reader asking it of themselves. The
+# Remediation section states the 1,600 / 14,000 count as a case fact in the third person;
+# the card puts the same number in the buyer's mouth.
+#
+# The shape lines are the other layer, describing the work rather than speaking as anyone,
+# and carry no pronoun at all.
 offerings: [
   {
     "name": "Remediation",
     "href": "#remediation-when-something-is-already-broken",
-    "hook": "A customer count came back 1,600 in one system and 14,000 in another.",
+    "hook": "Our customer count came back 1,600 in one system and 14,000 in another.",
     "shape": "A bounded look that ends in a decision rather than a report, then the fixes worth making."
   },
   {
@@ -22,8 +35,8 @@ offerings: [
   {
     "name": "Diligence",
     "href": "#diligence-before-you-own-it",
-    "hook": "What are you actually buying? How do we create value?",
-    "shape": "A customer base audit, a data condition review, and an integration cost estimate, before you close."
+    "hook": "What are we actually buying? How do we create value?",
+    "shape": "A customer base audit, a data condition review, and an integration cost estimate, before the close."
   }
 ]
 ---
