@@ -153,17 +153,17 @@ h3 {
   max-width: 56ch;
 }
 
-/* The identity line: what this company is, stated plainly under the H1. Home page
-   only. Set above the lede so the first thing after the headline is an answer to
-   "what is this?" rather than the start of an argument. */
+/* The identity line: what this company is, stated plainly. Home page only.
+   MOVED BELOW THE THREE OFFERINGS 2026-09-14 (David). It used to sit above the lede, and
+   the reason recorded here was that the first thing after the headline should answer "what
+   is this?" rather than start an argument. The three cards now answer that question far
+   more concretely than this sentence does, so the sentence lost its seat to them and the
+   wall argument takes the fold. It opens the body column instead. */
 .identity {
-  font-size: 1.28rem;
-  line-height: 1.45;
-  font-weight: 500;
-  color: var(--ink, var(--blue-700));
-  margin-top: 20px;
   max-width: 54ch;
+  color: var(--paper-600);
 }
+.homebody > .identity { margin-bottom: 4px; }
 
 /* ---------- page head with a portrait ---------- */
 
@@ -503,13 +503,37 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
   margin-top: 20px;
   max-width: 50ch;
 }
+/* The lede carries the fold with the headline (David, 2026-09-14), and the identity line
+   it used to follow now sits below the cards. Two readers on the same day both stalled on
+   the front page; the wall sentence is the most provocative thing on it, so it goes where
+   a reader who is not going to scroll will still meet it. */
+/* The SLOT keeps its treatment and the content in it changed, which is what swapping the
+   two paragraphs actually means. The second thing under the H1 has always been set at
+   1.28rem in blue-700; that is now the wall argument rather than the identity line, and
+   the identity line takes the muted body treatment the lede used to have. */
 .hero .lede {
-  margin-top: 18px;
-  color: var(--paper-600);
-  max-width: 58ch;
+  margin-top: 20px;
+  font-size: 1.28rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ink, var(--blue-700));
+  max-width: 54ch;
 }
 
 .homebody { padding-top: 56px; }
+
+/* On a phone the display size costs more than it buys: at 1.28rem the wall paragraph runs
+   seven lines and pushes the first offering's hook 45px under the fold, which is the one
+   thing this layout exists to prevent. Back to body size, where it wraps shorter and the
+   first card is reachable without a scroll. The masthead's wrapped nav already spends
+   247px of an 812px screen, so there is no slack to give away here.
+
+   THIS BLOCK MUST STAY BELOW `.hero .lede`. It was first written into the 620px media
+   query further up the file, which has the same specificity and loses on source order, so
+   it silently did nothing and the measured card position did not move at all. */
+@media (max-width: 620px) {
+  .hero .lede { font-size: 1.0625rem; font-weight: 400; line-height: 1.55; }
+}
 
 /* Section rules give the front page a structure a single prose column does not.
    Suppressed on the first heading so it does not double the hero's border. */

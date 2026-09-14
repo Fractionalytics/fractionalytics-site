@@ -613,12 +613,12 @@ ${offerings.map((o) => `<li>
   const bodyHtml = `<section class="hero">
 <div class="wrap hero-inner">
 <h1>${esc(meta.title)}</h1>
-${meta.identity ? `<p class="identity">${esc(meta.identity)}</p>` : ''}
 <p class="lede">${esc(meta.lede)}</p>
 </div>
 </section>
 ${offeringsHtml}
 <div class="wrap homebody">
+${meta.identity ? `<p class="identity">${esc(meta.identity)}</p>` : ''}
 <div class="prose">
 ${html}
 </div>
