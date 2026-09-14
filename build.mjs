@@ -225,12 +225,30 @@ function parseDoc(raw) {
   const head = text.slice(4, end);
   const body = text.slice(end + 5).trim();
   const meta = {};
-  for (const line of head.split('\n')) {
-    const m = /^([A-Za-z][A-Za-z0-9_]*):\s*(.*)$/.exec(line);
+  const lines = head.split('\n');
+  for (let i = 0; i < lines.length; i++) {
+    const m = /^([A-Za-z][A-Za-z0-9_]*):\s*(.*)$/.exec(lines[i]);
     if (!m) continue;
     const key = m[1];
     let val = m[2].trim();
-    if (val.startsWith('[') || val.startsWith('"')) {
+    // A value that opens a JSON array or object may run over several lines, so a
+    // structured block (the home page's `offerings`) stays editable by hand instead of
+    // being crushed onto one unreadable line. Keep pulling lines in until it parses.
+    if (val.startsWith('[') || val.startsWith('{')) {
+      let acc = val;
+      let j = i;
+      let parsed;
+      for (;;) {
+        try { parsed = JSON.parse(acc); break; } catch { /* needs more lines */ }
+        j++;
+        if (j >= lines.length) { parsed = undefined; break; }
+        acc += '\n' + lines[j];
+      }
+      if (parsed !== undefined) { meta[key] = parsed; i = j; continue; }
+      meta[key] = val;
+      continue;
+    }
+    if (val.startsWith('"')) {
       try { val = JSON.parse(val); } catch { /* leave the raw string */ }
     }
     meta[key] = val;
@@ -576,6 +594,22 @@ const posts = postFiles.map((f) => {
   // The home page is the practice's front door, not an article. It deliberately does
   // NOT use the eyebrow/<article> treatment every post on this site uses: rendered that
   // way it read as one more blog post and never said what Fractionalytics is (2026-08-21).
+  // Darin Phillips read the whole page on 2026-09-14 and came away able to name three
+  // offerings, which means they are on the page; he had to read 277 words of body copy to
+  // find the first one. This block promotes them to the fold. The hook line on each card is
+  // David's own sentence, lifted verbatim from the section it links to, because the point
+  // was never that the page needed new words. It needed the good ones earlier.
+  const offerings = Array.isArray(meta.offerings) ? meta.offerings : [];
+  const offeringsHtml = offerings.length ? `<div class="wrap">
+<ul class="cards offerings">
+${offerings.map((o) => `<li>
+<h2><a href="${escAttr(o.href)}">${esc(o.name)}</a></h2>
+<p class="offering-hook">${esc(o.hook)}</p>
+<p class="offering-shape">${esc(o.shape)}</p>
+</li>`).join('\n')}
+</ul>
+</div>` : '';
+
   const bodyHtml = `<section class="hero">
 <div class="wrap hero-inner">
 <h1>${esc(meta.title)}</h1>
@@ -583,6 +617,7 @@ ${meta.identity ? `<p class="identity">${esc(meta.identity)}</p>` : ''}
 <p class="lede">${esc(meta.lede)}</p>
 </div>
 </section>
+${offeringsHtml}
 <div class="wrap homebody">
 <div class="prose">
 ${html}

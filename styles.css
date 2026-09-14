@@ -328,6 +328,50 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
 .cards h3 { margin-top: 0; }
 .cards p { font-size: 0.97rem; }
 
+/* ---------- the three offerings, directly under the hero ----------
+   Reuses .cards geometry so the fold and the body share one grid. The cyan top rule is
+   the same accent .callout already uses; the palette is unchanged. Two outside readers
+   disagreed about the colour scheme on 2026-09-14 and the one who called it boring
+   conditioned it on the wall of text ("with that many words, it is pretty boring"), so
+   the fix here is the fold, not the palette. */
+.cards.offerings { margin: 0; gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
+.cards.offerings > li {
+  border: 0;
+  border-radius: 0;
+  border-top: 3px solid var(--brand-cyan);
+  background: var(--paper-0);
+  padding: 26px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cards.offerings h2 {
+  margin: 0;
+  max-width: none;
+  font-size: 1.12rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--paper-600);
+}
+.cards.offerings h2 a { color: inherit; text-decoration: none; background: none; }
+.cards.offerings h2 a:hover { color: var(--brand-blue); }
+.cards.offerings .offering-hook {
+  font-size: 1.16rem;
+  line-height: 1.38;
+  color: var(--blue-900);
+  font-weight: 500;
+}
+.cards.offerings .offering-shape {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: var(--paper-600);
+  margin-top: auto;
+}
+/* The whole card is the target, so the heading link does not become a small tap area on a
+   phone. Needs the li to establish a containing block for the stretched pseudo-element. */
+.cards.offerings > li { position: relative; }
+.cards.offerings h2 a::after { content: ""; position: absolute; inset: 0; }
+
 .callout {
   border-left: 3px solid var(--brand-cyan);
   background: var(--paper-50);
@@ -442,20 +486,25 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
   background: var(--paper-100);
   border-bottom: 1px solid var(--paper-400);
 }
+/* Tightened 2026-09-14. At 92/76 the hero filled a laptop screen on its own and the three
+   offerings below it never appeared without a scroll, which is the exact complaint Darin
+   Phillips made ("I really struggled to understand what your real business proposition was
+   by looking at what is on your front page"). The prose is untouched; only the air around
+   it moved. */
 .hero-inner {
-  padding-top: 92px;
-  padding-bottom: 76px;
+  padding-top: 58px;
+  padding-bottom: 46px;
 }
 .hero h1 {
   max-width: 18ch;
   font-size: clamp(2.1rem, 5.4vw, 3.6rem);
 }
 .hero .identity {
-  margin-top: 26px;
+  margin-top: 20px;
   max-width: 50ch;
 }
 .hero .lede {
-  margin-top: 22px;
+  margin-top: 18px;
   color: var(--paper-600);
   max-width: 58ch;
 }

@@ -5,6 +5,26 @@ metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
 identity: "Fractionalytics is a fractional Chief Data Officer practice: data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data."
 lede: "Companies that already bought the AI keep hitting the same wall: the systems underneath disagree about the basics. That work has always been needed and rarely fundable, because nobody could say what it would cost or what it would return. Both of those just changed."
+offerings: [
+  {
+    "name": "Remediation",
+    "href": "#remediation-when-something-is-already-broken",
+    "hook": "A customer count came back 1,600 in one system and 14,000 in another.",
+    "shape": "A bounded look that ends in a decision rather than a report, then the fixes worth making."
+  },
+  {
+    "name": "Fractional CDO",
+    "href": "#fractional-cdo-when-it-is-not-one-thing",
+    "hook": "We want to be data-driven and AI-forward, and we are having trouble getting there.",
+    "shape": "The right people, the trust in the numbers, the tool stack, and what the team returns."
+  },
+  {
+    "name": "Diligence",
+    "href": "#diligence-before-you-own-it",
+    "hook": "What are you actually buying?",
+    "shape": "A customer base audit, a data condition review, and an integration cost estimate, before you close."
+  }
+]
 ---
 
 Most companies I meet are not stuck on AI. They are stuck underneath it.
