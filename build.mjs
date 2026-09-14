@@ -610,9 +610,19 @@ ${offerings.map((o) => `<li>
 </ul>
 </div>` : '';
 
+  // The display heading breaks on lines David chose, after the LinkedIn banner, which sets
+  // the same sentence as three lines and colours the middle one differently. One <h1> with
+  // block spans, so a screen reader and a crawler still read a single heading.
+  const titleLines = Array.isArray(meta.titleLines) && meta.titleLines.length
+    ? meta.titleLines
+    : [meta.title];
+  const h1Html = titleLines
+    .map((line, n) => `<span class="tline tline-${n + 1}">${esc(line)}</span>`)
+    .join('\n');
+
   const bodyHtml = `<section class="hero">
 <div class="wrap hero-inner">
-<h1>${esc(meta.title)}</h1>
+<h1 class="stacked">${h1Html}</h1>
 <p class="lede">${esc(meta.lede)}</p>
 </div>
 </section>

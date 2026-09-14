@@ -1,6 +1,7 @@
 ---
 title: "AI strategy, the data beneath it, and the systems to run it"
 eyebrow: "Past the pilot"
+titleLines: ["AI strategy", "The data beneath it", "The systems to run it"]
 metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
 identity: "Fractionalytics is a fractional Chief Data Officer practice: data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data."
@@ -21,7 +22,7 @@ offerings: [
   {
     "name": "Diligence",
     "href": "#diligence-before-you-own-it",
-    "hook": "What are you actually buying?",
+    "hook": "What are you actually buying? How do we create value?",
     "shape": "A customer base audit, a data condition review, and an integration cost estimate, before you close."
   }
 ]
