@@ -5,7 +5,7 @@ titleLines: ["Value creation with AI requires", "trusted data foundations"]
 metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
 identity: "Fractionalytics is a fractional data and analytics consultancy that helps founder-led and private-equity-backed companies get their data trustworthy enough to build on, then automate the use cases that create value."
-lede: "AI projects stall when the systems underneath the AI disagree about basic metric definitions. Where humans used to catch bad numbers before they reached a dashboard, AI systems act on whatever data they're given."
+lede: "AI projects stall when the systems underneath them disagree about basic metric definitions. Where humans used to catch bad numbers before they reached a dashboard, AI systems act on whatever data they're given."
 # COPY REWRITTEN BY DAVID 2026-09-22, by hand in the generated HTML, then synced back here the
 # same day so a build reproduces it. His rewrite is the canon for this page; edit here, not in
 # index.html. He added the quotation marks around the three hooks and reordered the cards
