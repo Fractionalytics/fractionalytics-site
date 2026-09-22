@@ -1,55 +1,53 @@
 ---
 title: "AI strategy, the data beneath it, and the systems to run it"
 eyebrow: "Past the pilot"
-titleLines: ["AI strategy", "The data beneath it", "The systems to run it"]
+titleLines: ["Value creation with AI requires", "trusted data foundations"]
 metaTitle: "Fractionalytics: AI strategy and the data foundation under it"
 description: "Fractional CDO work for companies stuck past the pilot: AI strategy, the data foundation under it, and the systems to run it. David Smith, Coral Gables."
-identity: "Fractionalytics is a fractional Chief Data Officer practice: data strategy, foundations, remediation and customer analytics for companies moving on AI, whose ambitions have outrun the state of their data."
-lede: "Companies that already bought the AI keep hitting the same wall: the systems underneath disagree about the basics. That work has always been needed and rarely fundable, because nobody could say what it would cost or what it would return. Both of those just changed."
-# The three hooks are ONE REGISTER: the buyer's own voice, first person plural. The site's
-# prose voice is first person SINGULAR ("Most companies I meet", "what I get hired to do"),
-# so a "we" here can only be read as the buyer, never as the practice. Card 2 is David's
-# verbatim sentence from the section below and anchors the other two.
+identity: "Fractionalytics is a fractional data and analytics consultancy that helps founder-led and private-equity-backed companies get their data trustworthy enough to build on, then automate the use cases that create value."
+lede: "AI projects stall when the systems underneath the AI disagree about basic metric definitions. Where humans used to catch bad numbers before they reached a dashboard, AI systems act on whatever data they're given."
+# COPY REWRITTEN BY DAVID 2026-09-22, by hand in the generated HTML, then synced back here the
+# same day so a build reproduces it. His rewrite is the canon for this page; edit here, not in
+# index.html. He added the quotation marks around the three hooks and reordered the cards
+# (Diligence now second). The two anchors he set by hand are kept with {#...} on the headings.
 #
-# They therefore DIVERGE FROM THE BODY COPY ON PURPOSE and a consistency pass must not
-# align them back: the Diligence section asks "what are you actually buying?", David
-# addressing the reader, while the card has the reader asking it of themselves. The
-# Remediation section states the 1,600 / 14,000 count as a case fact in the third person;
-# the card puts the same number in the buyer's mouth.
+# The three hooks are ONE REGISTER: the buyer's own voice, first person plural, which is why
+# they are in quotation marks. A "we" here can only be read as the buyer, never as the
+# practice. The hooks DIVERGE FROM THE BODY COPY ON PURPOSE and a consistency pass must not
+# align them back.
 #
-# The shape lines are the other layer, describing the work rather than speaking as anyone,
-# and carry no pronoun at all.
+# The shape lines are the other layer, describing the work rather than speaking as anyone.
 offerings: [
   {
     "name": "Remediation",
     "href": "#remediation-when-something-is-already-broken",
-    "hook": "Our customer count came back 1,600 in one system and 14,000 in another.",
-    "shape": "A bounded look that ends in a decision rather than a report, then the fixes worth making."
-  },
-  {
-    "name": "Fractional CDO",
-    "href": "#fractional-cdo-when-it-is-not-one-thing",
-    "hook": "We want to be data-driven and AI-forward, and we are having trouble getting there.",
-    "shape": "The right people, the trust in the numbers, the tool stack, and what the team returns."
+    "hook": "\"Our customer count came back 1,600 in one system and 14,000 in another.\"",
+    "shape": "A bounded look to discover the root cause and a plan for the fixes worth making."
   },
   {
     "name": "Diligence",
-    "href": "#diligence-before-you-own-it",
-    "hook": "What are we actually buying? How do we create value?",
-    "shape": "A customer base audit, a data condition review, and an integration cost estimate, before the close."
+    "href": "#diligence-own-it",
+    "hook": "\"What are we actually buying? How do we create value?\"",
+    "shape": "A customer base audit, a data condition review, and an integration cost estimate."
+  },
+  {
+    "name": "Fractional CDO",
+    "href": "#fractional-cdo-section",
+    "hook": "\"We want to be data-driven and AI-forward, and we are having trouble getting there.\"",
+    "shape": "Align the people and tool stack with trust in the numbers and value delivery."
   }
 ]
 ---
 
-Most companies I meet are not stuck on AI. They are stuck underneath it.
+Most companies are not stuck on AI. They are stuck underneath it.
 
 They ran the pilot, bought the license, or built the agent, and it worked well enough to raise the ambition. Then the next step needed two systems to agree on something basic, and they did not. Nobody inside the building can say how far off the numbers are, or why, because the people who built the mess left and the logic lives in dashboards, spreadsheets and three people's heads.
 
-The money for all of it is already gone. The license gets paid every month whether or not anyone can switch it on, and the pilot that worked is sitting next to the one that cannot ship. Getting that spend to return something is most of what I get hired to do, and it is a different conversation from asking for more budget.
+The license gets paid every month whether or not anyone can switch it on, and the pilot that worked is sitting next to the one that cannot ship. Getting that spend to return something is most of what I get hired to do.
 
 ## What that looks like in practice
 
-**A consumer software company had paid for a marketing platform it could not switch on.** Two upstream systems disagreed about who the customers were by more than 300,000 records. The license was being paid monthly and returning nothing. The tool was never the problem.
+**A consumer software company had paid for a marketing platform it could not switch on.** Two upstream systems disagreed about who the customers were by more than 300,000 records. The license was being paid monthly and returning nothing. The tool was not the problem. It was the data feeding into it.
 
 **At a payments company, finance and growth calculated profit per transaction differently**, millions apart on a single cost line. A new product showed a profit in one report and a loss in the other, and the leadership team could not fund it or kill it.
 
@@ -63,23 +61,21 @@ The money for all of it is already gone. The license gets paid every month wheth
 
 **Part C. Keep it from happening again.** The reason this work has historically been thrown away is that nothing captured what was learned. Every definition settled, every rule agreed and every fix made becomes something the business owns and the next AI project stands on, rather than tribal knowledge that leaves when someone does.
 
-## Diligence, before you own it
+## Diligence, whether you own it yet or not {#diligence-own-it}
 
-The three parts above are what happens once the company is yours. Diligence asks a different question, for a different person, at the only moment it can be asked: what are you actually buying?
+Diligence, a thorough review of what condition the data is in and what the data says about the customer base, is best performed prior to investing. But it is also valuable to look at regularly after you own it to see what it says about the opportunities and risks in the business.
 
-**A customer base audit.** Cohorts, concentration and payback rebuilt from the event logs or transaction records, with the segments carrying the thesis named. Concentration first, because revenue resting on a few customers is a risk the multiple should price.
+**A customer base audit.** Cohorts, concentration, retention, lifetime value, and payback rebuilt from the event logs or transaction records, with the segments carrying the thesis named. The value of your business is the sum of the value of your customers, the ones you have plus the ones you'll acquire.
 
 **A data condition review.** Which reported numbers come from a system, and which get rebuilt in a spreadsheet every month. Manual processes pass diligence intact and then set the ceiling on the operating plan, because every initiative built on those numbers inherits the manual step.
 
 **An integration cost estimate.** Every add-on is a data integration event and the target's definitions will not match yours. That cost is knowable before you close, and it is usually discovered in month four.
 
-This is diagnosis, not remediation. If everything is in decent shape, that is the finding and you can stop.
+## Fractional CDO, when it is more than one thing {#fractional-cdo-section}
 
-## Fractional CDO, when it is not one thing
+Sometimes it is not one broken thing. What I hear is a version of the same sentence: "We want to be data-driven and AI-forward, and we are having trouble getting there."
 
-Sometimes it is not one broken thing. What I hear is a version of the same sentence: we want to be data-driven and AI-forward, and we are having trouble getting there.
-
-The answer is never one thing either. It is a combination, and which part is binding differs every time.
+The answer is a combination of things, and which part is binding differs every time.
 
 - Do you have the right people on the bus, and are they in the right seats?
 - Does the business trust its data?
@@ -87,9 +83,9 @@ The answer is never one thing either. It is a combination, and which part is bin
 - Is the tool stack getting in the way?
 - What is the company spending on this team, and what is it getting back?
 
-Trust is usually the long one, and you can hear it in the meetings. Finance does not trust what marketing is saying and marketing does not trust what finance is saying, so all they do is argue about the numbers rather than take action and grow their business.
+Trust is usually the central issue. Finance does not trust what marketing is saying and marketing does not trust what finance is saying, so they spend time arguing about the numbers rather than taking action to grow the business.
 
-The tool stack question runs the whole gamut, from how the data comes in to whether what comes out is trustworthy enough to point AI at. One company had Snowflake with a pile of views built on top and nothing managing any of it. We rebuilt that layer in dbt.
+The tool stack that orchestrates the flow of data covers everything from how the data comes in to whether what comes out is trustworthy enough to point AI at. One company had Snowflake with a pile of views built on top and nothing managing any of it. We rebuilt that layer in dbt.
 
 The last question is the one that rarely gets asked out loud. Some of what a data team returns is intangible, and that is fine, but the ROI equation is still real and it can be improved.
 
@@ -114,8 +110,6 @@ I sell no software and take no vendor commissions, so when the answer is that a 
 ## Why the economics changed
 
 Data remediation has always been needed and rarely funded, because nobody could size it or say what it returned. Both halves of that moved. The value went up, because clean data is now the difference between an AI initiative that gets believed and one that quietly stops being used. The cost came down, because the archeology, working out what a system does and why it disagrees with its neighbor, is the part that used to take months of expensive people and is now the part that compresses most.
-
-That is an argument about economics, not a payback model. Anyone who hands you one of those before looking at your systems is guessing.
 
 ## Start with the Ladder Check
 

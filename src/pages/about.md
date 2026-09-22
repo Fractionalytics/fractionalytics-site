@@ -10,7 +10,7 @@ I have been building at the boundary between business, software and data for dec
 
 Anyone can point an LLM at a system and ask what's wrong. Knowing which of its answers survive contact with the people who run the business on it is the job.
 
-The rest is people, and it is where this work usually fails. Nobody wants to be told their numbers are wrong, and the answers only hold when the people who own the systems are the ones deciding what a record means. I learn a new business fast because that part is the fun of it, and I would rather build something smarter than something anyone could have built.
+The rest is people, and it is where this work usually fails. Nobody wants to be told their numbers are wrong, and the answers only hold when the people who own the systems are the ones deciding what a record means. My experience helps me learn a new business fast, and that's the fun part. I would rather build something smarter than something anyone could have built.
 
 ## What I bring
 
@@ -19,7 +19,7 @@ Range, and not only across industries.
 - **Across domains.** Enterprise software, startups, data science, and now production AI, learning each domain fast and pushing until it works.
 - **Across the stack.** Enterprise-grade (Databricks, Snowflake, BigQuery) to scrappy startups (Postgres, Metabase), right-sized to your problem and budget.
 - **Across hundreds of companies.** Six years inside an international venture firm's portfolio, hands-on across fintech, edtech, pharma, and more, so I tell fast whether a problem is structural or just process.
-- **Across strategy and build.** I am the rare person who sets the C-level strategy, leads the team that executes it, and builds the highest-leverage pieces myself. An engineering degree, an MBA, and decades building let me hold the business case and the technical detail in one conversation, so nothing is lost between the strategy and the delivery.
+- **Across strategy and build.** I set the C-level strategy, lead the team that executes it, and build the highest-leverage pieces myself. An engineering degree, an MBA, and decades building let me hold the business case and the technical detail in one conversation, so nothing is lost between the strategy and the delivery.
 
 ## Fractionalytics, LLC
 

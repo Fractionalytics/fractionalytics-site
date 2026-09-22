@@ -109,8 +109,12 @@ export function markdown(src) {
     const h = /^(#{1,4})\s+(.*)$/.exec(line);
     if (h) {
       const level = h[1].length;
-      const text = h[2].trim();
-      const id = slugify(text);
+      // An explicit anchor, `## Heading text {#my-anchor}`, keeps a link stable when the heading
+      // wording changes. Added 2026-09-22 so the home page cards could keep the anchors David
+      // set by hand (#diligence-own-it, #fractional-cdo-section) instead of the text-derived slug.
+      const explicit = /^(.*?)\s*\{#([a-z0-9-]+)\}$/.exec(h[2].trim());
+      const text = explicit ? explicit[1].trim() : h[2].trim();
+      const id = explicit ? explicit[2] : slugify(text);
       if (level === 2) headings.push({ id, text });
       out.push(`<h${level} id="${escAttr(id)}">${inline(text)}</h${level}>`);
       i++;
