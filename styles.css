@@ -159,14 +159,21 @@ h3 {
    is this?" rather than start an argument. The three cards now answer that question far
    more concretely than this sentence does, so the sentence lost its seat to them and the
    wall argument takes the fold. It opens the body column instead. */
+/* RESTYLED 2026-09-22 (David): larger, in the brand blue, with a rule underneath, so it reads
+   as the statement of what the company is rather than as the first paragraph of the prose.
+   Its right edge matches the prose column below. `ch` is relative to the element's OWN font
+   size, so 68ch at this size would run wider than 68ch of body text; the calc converts the
+   body measure (68ch at 1.0625rem) into this font size. Change one number, change both. */
 .identity {
-  font-size: 1.28rem;
-  line-height: 1.45;
+  font-size: 1.5rem;
+  line-height: 1.4;
   font-weight: 500;
-  color: var(--ink, var(--blue-700));
-  max-width: 54ch;
+  color: var(--brand-blue);
+  max-width: calc(var(--measure) * 1.0625 / 1.5);
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
 }
-.homebody > .identity { margin-bottom: 4px; }
+.homebody > .identity { margin: 0 0 30px; }
 
 /* ---------- page head with a portrait ---------- */
 
@@ -532,13 +539,15 @@ thead th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.
    two paragraphs actually means. The second thing under the H1 has always been set at
    1.28rem in blue-700; that is now the wall argument rather than the identity line, and
    the identity line takes the muted body treatment the lede used to have. */
+/* Width matched to the prose column 2026-09-22: see the note on .identity for why the
+   measure has to be converted rather than reused. */
 .hero .lede {
   margin-top: 20px;
   font-size: 1.28rem;
   line-height: 1.45;
   font-weight: 500;
   color: var(--ink, var(--blue-700));
-  max-width: 54ch;
+  max-width: calc(var(--measure) * 1.0625 / 1.28);
 }
 
 .homebody { padding-top: 56px; }
