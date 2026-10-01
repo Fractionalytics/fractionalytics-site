@@ -582,6 +582,7 @@ const posts = postFiles.map((f) => {
     origin: meta.origin,
     tags: Array.isArray(meta.tags) ? meta.tags : [],
     series: meta.series || null,
+    format: meta.format === 'post' ? 'post' : 'article',
     cover: meta.cover || null,
     coverAlt: meta.coverAlt || '',
     html: rendered.html,
@@ -917,7 +918,7 @@ posts.forEach((p, idx) => {
 <article class="prose">
 ${coverHtml}
 <header>
-${p.series ? `<p class="eyebrow">${esc(p.series)}</p>` : '<p class="eyebrow">Article</p>'}
+${p.series ? `<p class="eyebrow">${esc(p.series)}</p>` : `<p class="eyebrow">${p.format === 'post' ? 'LinkedIn post' : 'Article'}</p>`}
 <h1>${esc(p.title)}</h1>
 <p class="lede">${esc(p.dek)}</p>
 <p class="article-meta">
@@ -932,7 +933,7 @@ ${toc}
 ${p.html}
 </div>
 <footer class="origin-note">
-<p>This piece was first published as a LinkedIn article on ${longDate(p.date)} and is reproduced here in full. <a href="${escAttr(p.origin)}" rel="noopener">Read it on LinkedIn</a>, where the comments are.</p>
+<p>This piece was first published as a LinkedIn ${p.format === 'post' ? 'post' : 'article'} on ${longDate(p.date)} and is reproduced here in full. <a href="${escAttr(p.origin)}" rel="noopener">Read it on LinkedIn</a>, where the comments are.</p>
 <ul>${nearby}</ul>
 </footer>
 </article>`;

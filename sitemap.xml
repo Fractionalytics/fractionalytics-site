@@ -25,6 +25,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fractionalytics.io/writing/a-confession-about-42-percent/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fractionalytics.io/writing/the-career-that-didnt-exist-yet/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fractionalytics.io/writing/what-lies-beneath-an-ai-project/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fractionalytics.io/writing/the-data-project-you-killed-would-pass-today/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
