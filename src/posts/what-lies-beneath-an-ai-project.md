@@ -4,6 +4,8 @@ dek: "A Phase II's output is not clean data. It is a cost estimate and scope for
 date: 2026-08-31
 origin: https://www.linkedin.com/feed/update/urn:li:activity:7500156701317439488/
 format: post
+cover: "cover-superfund-your-data.jpg"
+coverAlt: "A Superfund cleanup site: excavators, a dump truck and workers in white protective suits spraying down a pit of grey contaminated soil, with the words YOUR DATA added over the pit."
 tags: ["data foundations","data remediation"]
 ---
 When investors buy a commercial property, they also buy whatever environmental contamination comes with it, regardless of who put it there and when. They can protect themselves by ordering a Phase I environmental assessment for about $3K. It looks at records, a site walk, and interviews. Ordering it is what buys the protection, and the protection is conditional: afterward they have to live with any restrictions on the site, and they can't make the problem worse.
@@ -21,3 +23,5 @@ A Phase I for an AI project on proprietary data would be a quick look at whether
 How much to clean works the same way as environmental remediation. Don't clean all the data, just what's required for the use case in front of you. You clean to industrial, not to daycare. The use case pays for its own cleanup, and it gives the bill an end.
 
 A Phase II's output is not clean data. It is a cost estimate and scope for the cleanup. At that point, you're no longer operating from a position of fear. You're dealing with a defined project, to which you can say yes or no. What would you need to know about your own data before you'd greenlight the project?
+
+*Photo: U.S. Environmental Protection Agency, "Soil excavation and cleanup at a Superfund site," from the [Superfund cleanup process page](https://19january2017snapshot.epa.gov/superfund/superfund-cleanup-process_.html). The "YOUR DATA" caption is mine.*

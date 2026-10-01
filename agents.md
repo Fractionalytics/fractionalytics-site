@@ -21,7 +21,7 @@ fractional CDO basis when the problem needs someone embedded over an extended pe
 | `/writing/` | Index of 11 published articles |
 | `/writing/a-confession-about-42-percent/` | A confession about 42% (September 18, 2026, ~694 words) |
 | `/writing/the-career-that-didnt-exist-yet/` | The career that didn't exist yet (September 15, 2026, ~525 words) |
-| `/writing/what-lies-beneath-an-ai-project/` | What lies beneath an AI project? (August 31, 2026, ~533 words) |
+| `/writing/what-lies-beneath-an-ai-project/` | What lies beneath an AI project? (August 31, 2026, ~561 words) |
 | `/writing/the-data-project-you-killed-would-pass-today/` | The Data Project You Killed Would Pass Today (August 25, 2026, ~2481 words) |
 | `/writing/customer-analytics-is-worth-another-look/` | Customer Analytics Is Worth Another Look (August 17, 2026, ~1484 words) |
 | `/writing/how-many-customers-do-you-have/` | How Many Customers Do You Have? (August 10, 2026, ~1933 words) |

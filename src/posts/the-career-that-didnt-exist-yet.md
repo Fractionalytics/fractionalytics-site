@@ -4,6 +4,8 @@ dek: "My favorite part: seeing the look that people get when I tell them somethi
 date: 2026-09-15
 origin: https://www.linkedin.com/posts/dksmith01_in-2015-i-discovered-this-thing-called-share-7505681714342445056-zezG/
 format: post
+cover: "cover-little-league.jpg"
+coverAlt: "A faded childhood snapshot of David Smith in a Little League uniform, mid-swing at the plate, with a chain-link backstop and tall trees behind him."
 tags: ["career"]
 ---
 In 2015, I discovered this thing called "data science." Once I realized what it was, I thought, "This is the career that I always wanted, but it just didn't exist yet!"
